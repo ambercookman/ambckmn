@@ -1,0 +1,14 @@
+{
+  "name": "ambckmn",
+  "version": "1.0.0",
+  "description": "Developing a custom theme for my site from _s starter theme.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amber Cookman",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
