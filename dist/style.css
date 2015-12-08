@@ -42,18 +42,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@font-face {
-  font-family: 'Roboto-Condensed-Light';
-  src: url("fonts/Roboto-Condensed/RobotoCondensed-Light.ttf"); }
-
-@font-face {
-  font-family: 'Sansumi-Bold';
-  src: url("fonts/Sansumi/Sansumi-Bold.ttf"); }
-
-@font-face {
-  font-family: 'Ostrich-Sans';
-  src: url("fonts/Ostrich-Sans/ostrich-regular.ttf"); }
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -236,51 +224,19 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-/* Typography sizes established through minor third ratio
-   (1.2 em) applied to a base of 1.1em.
-   http://www.modularscale.com/?1.1&em&1.2&web&text
-*/
 body,
 button,
 input,
 select,
-textarea,
-.posted-on {
+textarea {
   color: #404040;
-  font-family: "Roboto-Condensed-Light", sans-serif;
-  font-size: 17.6px;
-  font-size: 1.1rem;
+  font-family: serif;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
-
-.site-description,
-.entry-title {
-  font-family: "Ostrich-Sans", sans-serif;
-  letter-spacing: 0.0625rem;
-  /*  1 / 16  */ }
-
-.site-title {
-  font-family: "Sansumi-Bold", sans-serif;
-  margin: 0.9rem 0 0 3%;
-  float: left; }
-
-.site-title,
-.site-description {
-  padding: 0.3125rem;
-  /*  5 / 16  */
-  display: inline-block; }
-
-.site-title,
-.entry-title {
-  font-size: 25.344px;
-  font-size: 1.584rem; }
-
-.site-description {
-  font-size: 21.12px;
-  font-size: 1.32rem;
-  margin: 0 30% 0 3%; }
 
 p {
   margin-bottom: 1.5em; }
@@ -322,14 +278,6 @@ big {
   font-size: 125%; }
 
 /*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-.site-header {
-  height: 7.5em;
-  /*  120 / 16  */
-  clear: both; }
-
-/*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
@@ -360,13 +308,7 @@ ul, ol {
   margin: 0 0 1.5em 3em; }
 
 ul {
-  list-style-type: none;
-  margin-left: 0; }
-
-.content-area ul li:before {
-  content: "\0BB \020";
-  padding-right: 0.625em;
-  /*  10 / 16  */ }
+  list-style: disc; }
 
 ol {
   list-style: decimal; }
@@ -426,19 +368,6 @@ input[type="submit"] {
     border-color: #aaa #bbb #bbb;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
-button.menu-toggle {
-  background: #fff;
-  box-shadow: none;
-  text-shadow: none;
-  border-color: #000;
-  color: #000;
-  font-size: 14.672px;
-  font-size: 0.917rem;
-  border: none;
-  float: right;
-  margin: -5.3125rem 3% 0 0;
-  /*  -85 / 16  */ }
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -474,12 +403,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #c04848;
-  text-decoration: none; }
+  color: royalblue; }
   a:visited {
-    color: #c04848; }
+    color: purple; }
   a:hover, a:focus, a:active {
-    color: rgba(192, 72, 72, 0.5); }
+    color: midnightblue; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -662,13 +590,8 @@ a {
 .group-blog .byline {
   display: inline; }
 
-.entry-header {
-  margin: 0 1.6em; }
-
-.entry-content {
-  margin: 1.5em 1.5em 0; }
-
 .page-content,
+.entry-content,
 .entry-summary {
   margin: 1.5em 0 0; }
 

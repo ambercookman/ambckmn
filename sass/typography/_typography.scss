@@ -1,11 +1,17 @@
+/* Typography sizes established through minor third ratio
+   (1.2 em) applied to a base of 1.1em.
+   http://www.modularscale.com/?1.1&em&1.2&web&text
+*/
+
 body,
 button,
 input,
 select,
-textarea {
+textarea,
+.posted-on {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1);
+	@include font-size(1.1);
 	line-height: $font__line-height-body;
 }
 

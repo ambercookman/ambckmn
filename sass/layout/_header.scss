@@ -1,0 +1,4 @@
+.site-header {
+	height: 7.5em; /*  120 / 16  */
+	@include clearfix-after;
+}

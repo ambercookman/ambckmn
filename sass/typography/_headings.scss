@@ -1,3 +1,31 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+.site-description,
+.entry-title {
+	font-family: $font__headings;
+	letter-spacing: 0.0625rem; /*  1 / 16  */
+}
+
+.site-title {
+	font-family: $font__logo;
+	margin: 0.9rem 0 0 3%;
+	float: left;
+}
+
+.site-title,
+.site-description {
+	padding: 0.3125rem; /*  5 / 16  */
+	display: inline-block;
+}
+
+.site-title,
+.entry-title {
+	@include font-size(1.584);
+}
+
+.site-description {
+	@include font-size(1.32);
+	margin: 0 30% 0 3%;
+}

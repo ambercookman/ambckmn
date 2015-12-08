@@ -3,7 +3,13 @@ ul, ol {
 }
 
 ul {
-	list-style: disc;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.content-area ul li:before {
+	content: "\0BB \020";
+	padding-right: 0.625em; /*  10 / 16  */
 }
 
 ol {
