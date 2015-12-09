@@ -22,10 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-title,
 .entry-title {
-	@include font-size(1.584);
+	@include font-size(1.392);
 }
 
 .site-description {
-	@include font-size(1.32);
+	@include font-size(1.238);
 	margin: 0 30% 0 3%;
 }
