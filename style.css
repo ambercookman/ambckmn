@@ -273,14 +273,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-title {
   font-family: "sansumiregular", sans-serif;
-  margin: 0.9rem 0 0 3%;
-  float: left; }
+  width: 14.06rem;
+  /*  225 / 16 -- minus .0025 */
+  margin: 0.625rem 0.625rem 0.625rem 0;
+  /*  10 / 16  */ }
 
 .site-title,
 .site-description {
-  padding: 0.3125rem;
-  /*  5 / 16  */
-  display: inline-block; }
+  text-align: center;
+  float: right; }
 
 .site-title,
 .entry-title {
@@ -290,7 +291,11 @@ h1, h2, h3, h4, h5, h6 {
 .site-description {
   font-size: 19.808px;
   font-size: 1.238rem;
-  margin: 0 30% 0 3%; }
+  width: 11.25rem;
+  /*  180 / 16  */
+  margin: -0.625rem 0.625rem 0 0;
+  /*  10 / 16  */
+  clear: right; }
 
 p {
   margin-bottom: 1.5em; }
@@ -335,8 +340,8 @@ big {
 # Layout
 --------------------------------------------------------------*/
 .site-header {
-  height: 7.5em;
-  /*  120 / 16  */
+  height: 5.125rem;
+  /*  82 / 16  */
   clear: both; }
 
 /*--------------------------------------------------------------
@@ -440,13 +445,13 @@ button.menu-toggle {
   background: #fff;
   box-shadow: none;
   text-shadow: none;
-  border-color: #000;
   color: #000;
   font-size: 15.648px;
   font-size: 0.978rem;
   border: none;
-  float: right;
-  margin: -5.3125rem 3% 0 0;
+  display: inline-block;
+  float: left;
+  margin: -50px 0 0 3%;
   /*  -85 / 16  */ }
 
 input[type="text"],
