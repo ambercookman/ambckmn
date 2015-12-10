@@ -546,9 +546,22 @@ a {
     text-decoration: none; }
 
 /* Small menu. */
+button.menu-toggle {
+  height: 2.5em;
+  /*  40 / 16  */ }
+
 .menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+.main-navigation.toggled {
+  margin-bottom: 0.9375em;
+  /*  15 / 16  */ }
+  .menu-toggle ul.nav-menu,
+  .main-navigation.toggled ul.nav-menu {
+    display: block; }
+    .menu-toggle ul.nav-menu li,
+    .main-navigation.toggled ul.nav-menu li {
+      width: 100%;
+      padding: 0.1875em 0 0.1875em 1.5em;
+      /*  3 / 16  */ }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
