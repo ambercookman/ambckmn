@@ -4,11 +4,10 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
 	border-color: $color__border-button;
-	border-radius: 3px;
 	background: $color__background-button;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
 	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
+	@include font-size(1.1);
 	line-height: 1;
 	padding: .6em 1em .4em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -27,12 +26,25 @@ input[type="submit"] {
 
 button.menu-toggle {
 	background: $color__background-body;
+	font-family: $font__headings;
+	letter-spacing: 0.0625rem; /*  1 / 16  */
 	box-shadow: none;
 	text-shadow: none;
 	color: #000;
-	@include font-size(.978);
 	border: none;
-	display: inline-block;
 	float: left;
-	margin: -50px 0 0 3%; /*  -85 / 16  */
+	margin: -33px 0 0 3%; /*  -85 / 16  */
+	// background: red;
+
+	&:after {
+		content: "";
+		display: block;
+		background: url("img/nav-arrow.png") center/80% no-repeat;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		left: 30px;
+		top: -25px;
+		// margin: 0 0 0 0;
+	}
 }

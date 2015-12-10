@@ -46,7 +46,8 @@ a {
 }
 
 a:active,
-a:hover {
+a:hover,
+button:focus {
 	outline: 0;
 }
 

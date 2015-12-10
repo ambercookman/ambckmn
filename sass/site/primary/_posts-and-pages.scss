@@ -6,9 +6,19 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-title {
+	border-bottom: black dashed 1px;
+	margin: 10px auto 5px;
+}
+
 .byline,
 .updated:not(.published){
 	display: none;
+}
+
+.posted-on {
+	@include font-size(0.869);
+	float: right;
 }
 
 .single .byline,

@@ -11,13 +11,12 @@ h1, h2, h3, h4, h5, h6 {
 .site-title {
 	font-family: $font__logo;
 	width: 14.06rem; /*  225 / 16 -- minus .0025 */
-	margin: 0.625rem 0.625rem 0.625rem 0; /*  10 / 16  */
+	margin: 0.625rem 0.625rem 0.3125rem 0; /*  10 / 16 = 0.625,  5 / 16 = 0.3125  */
 	// background: blue;
 }
 
 .site-title,
 .site-description {
-	// padding: 0.3125rem; /*  5 / 16  */
 	text-align: center;
 	float: right;
 }
@@ -28,8 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-description {
-	@include font-size(1.238);
-	width: 11.25rem; /*  180 / 16  */
+	width: 10.4375rem; /*  167 / 16  */
 	margin: -0.625rem 0.625rem 0 0; /*  10 / 16  */
 	// background: red;
 	clear: right;
