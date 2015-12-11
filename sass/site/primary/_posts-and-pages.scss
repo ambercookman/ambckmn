@@ -3,7 +3,7 @@
 }
 
 .hentry {
-	margin: 0 0 1.5rem;
+	margin: 0 0 3rem;
 }
 
 .entry-title {
@@ -35,16 +35,36 @@
 }
 
 .entry-content {
-	margin: 1.5rem 1.5rem 0;
+	margin: 1.5rem;
+	img,
+	p img {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 hr {
 	
 }
 
+.entry-content .more-link {
+	float: right;
+}
+
 .page-content,
 .entry-summary {
 	margin: 1.5rem 0 0;
+}
+
+.entry-footer {
+	margin: 1.5rem;
+	text-align: center;
+}
+
+.entry-footer .comments-link,
+.entry-footer .edit-link {
+	padding: 1.5rem;
+	@include font-size(0.978);
 }
 
 .page-links {
