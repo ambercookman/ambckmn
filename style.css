@@ -780,9 +780,10 @@ button.menu-toggle {
 
 .entry-footer .comments-link,
 .entry-footer .edit-link {
-  padding: 1.5rem;
-  font-size: 15.648px;
-  font-size: 0.978rem; }
+  padding: 1.5rem 1.5rem 1.5rem 0.543rem;
+  font-family: "roboto_condensedlight", sans-serif;
+  letter-spacing: initial;
+  font-weight: normal; }
 
 .page-links {
   clear: both;

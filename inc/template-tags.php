@@ -60,16 +60,16 @@ function ambckmn_entry_footer() {
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'ambckmn' ), esc_html__( '1 Comment', 'ambckmn' ), esc_html__( '% Comments', 'ambckmn' ) );
-		echo '</span>';
+		echo '<h5>&#47;&#47; <span class="comments-link">';
+		comments_popup_link( esc_html__( 'Your thoughts?', 'ambckmn' ), esc_html__( '1 Comment', 'ambckmn' ), esc_html__( '% Comments', 'ambckmn' ) );
+		echo '</span></h5>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
 			esc_html__( 'Edit %s', 'ambckmn' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			the_title( '<h5>&#47;&#47; <span class="screen-reader-text">"', '"</span></h5>', false )
 		),
 		'<span class="edit-link">',
 		'</span>'
