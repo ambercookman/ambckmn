@@ -69,7 +69,7 @@ function ambckmn_entry_footer() {
 		sprintf(
 			/* translators: %s: Name of current post */
 			esc_html__( 'Edit %s', 'ambckmn' ),
-			the_title( '<h5>&#47;&#47; <span class="screen-reader-text">"', '"</span></h5>', false )
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
 		'</span>'

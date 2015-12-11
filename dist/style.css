@@ -264,13 +264,34 @@ textarea,
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
-
-.site-description,
-.entry-title {
+  clear: both;
   font-family: "ostrich_sansmedium", sans-serif;
   letter-spacing: 0.0625rem;
   /*  1 / 16  */ }
+
+h1 {
+  font-size: 25.056px;
+  font-size: 1.566rem; }
+
+h2 {
+  font-size: 22.272px;
+  font-size: 1.392rem; }
+
+h3 {
+  font-size: 19.808px;
+  font-size: 1.238rem; }
+
+h4 {
+  font-size: 17.6px;
+  font-size: 1.1rem; }
+
+h5 {
+  font-size: 15.648px;
+  font-size: 0.978rem; }
+
+h6 {
+  font-size: 13.904px;
+  font-size: 0.869rem; }
 
 .site-title {
   font-family: "sansumiregular", sans-serif;
@@ -290,6 +311,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.392rem; }
 
 .site-description {
+  font-family: "ostrich_sansmedium", sans-serif;
+  letter-spacing: 0.0625rem;
+  /*  1 / 16  */
   width: 10.4375rem;
   /*  167 / 16  */
   margin: -0.625rem 1.4rem 0 0;
@@ -710,7 +734,7 @@ button.menu-toggle {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5rem; }
+  margin: 0 0 3rem; }
 
 .entry-title {
   border-bottom: black dashed 1px;
@@ -737,11 +761,41 @@ button.menu-toggle {
   font-size: 0.869rem; }
 
 .entry-content {
-  margin: 1.5rem 1.5rem 0; }
+  margin: 1.5rem; }
+  .entry-content img,
+  .entry-content p img {
+    display: block;
+    margin: 0 auto; }
+
+.entry-content .more-link {
+  float: right; }
 
 .page-content,
 .entry-summary {
   margin: 1.5rem 0 0; }
+
+.entry-footer {
+  margin: 1.5rem;
+  text-align: center; }
+
+.entry-footer .comments-link,
+.entry-footer .edit-link {
+  font-family: "roboto_condensedlight", sans-serif;
+  letter-spacing: initial;
+  font-weight: normal;
+  display: inline; }
+
+.edit-link {
+  font-size: 15.648px;
+  font-size: 0.978rem; }
+  .edit-link:before {
+    content: "// ";
+    font-family: "roboto_condensedlight", sans-serif;
+    letter-spacing: 0.0625rem;
+    /*  1 / 16  */
+    width: 10px;
+    height: 10px;
+    padding-right: 0.543rem; }
 
 .page-links {
   clear: both;

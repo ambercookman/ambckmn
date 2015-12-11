@@ -149,7 +149,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-// Remove the admin bar from the front end
+// Remove the admin bar from the front end for testing and development
 add_filter( 'show_admin_bar', '__return_false' );
 
-
+// Modify "Read More" link text
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+function modify_read_more_link() {
+return '<a class="more-link" href="' . get_permalink() . '">Continue Reading &raquo;</a>';
+}

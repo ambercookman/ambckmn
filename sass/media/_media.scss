@@ -7,6 +7,20 @@
 	padding: 0;
 }
 
+.entry-content img,
+.entry-content p img {
+	display: block;
+	margin: 0 auto;
+}
+
+.entry-content img.alignright {
+	margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.entry-content img.alignleft {
+	margin: 1.5rem 1.5rem 1.5rem 0;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,

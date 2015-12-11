@@ -7,8 +7,14 @@
 }
 
 .entry-title {
-	border-bottom: black dashed 1px;
 	margin: 10px auto 5px;
+	color: $gradient-color1;
+}
+
+.entry-header hr {
+	border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, $gradient-color1, $gradient-color2, $gradient-color1);
 }
 
 .byline,
@@ -21,9 +27,9 @@
 	float: right;
 }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
+.posted-on,
+.byline {
+	display: block;
 }
 
 .entry-header {
@@ -36,15 +42,6 @@
 
 .entry-content {
 	margin: 1.5rem;
-	img,
-	p img {
-		display: block;
-		margin: 0 auto;
-	}
-}
-
-hr {
-	
 }
 
 .entry-content .more-link {
@@ -62,12 +59,24 @@ hr {
 }
 
 .entry-footer .comments-link,
-.entry-footer .edit-link {
-	padding: 1.5rem 1.5rem 1.5rem 0.543rem;
+.entry-footer .post-edit-link {
+	// padding: 1.5rem 1.5rem 1.5rem 0.543rem;
 	font-family: $font__main;
 	letter-spacing: initial;
 	font-weight: normal;
-	// @include font-size(0.978);
+	display: inline;
+}
+
+.edit-link {
+	@include font-size(0.978);
+
+	&:before {
+		content: '// ';
+		@include font-size(.92);
+		letter-spacing: 0.07rem;
+		width: 10px;
+		height: 10px;
+	}
 }
 
 .page-links {
