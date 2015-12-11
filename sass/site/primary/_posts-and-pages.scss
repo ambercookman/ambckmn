@@ -83,3 +83,21 @@
 	clear: both;
 	margin: 0 0 1.5rem;
 }
+
+.post-navigation .nav-links {
+	margin: 0 1.5rem 0 1.5rem;
+}
+
+.site-footer {
+	padding: 0.869rem 1.5rem;
+
+	.site-info {
+	text-align: center;
+	@include font-size(0.756);
+	}
+}
+
+
+
+
+
