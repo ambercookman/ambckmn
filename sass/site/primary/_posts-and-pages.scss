@@ -3,7 +3,7 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 }
 
 .entry-title {
@@ -27,19 +27,27 @@
 }
 
 .entry-header {
-	margin: 0 1.6em;
+	margin: 0 1.6rem;
+}
+
+.entry-meta .byline {
+	@include font-size(0.869);
 }
 
 .entry-content {
-	margin: 1.5em 1.5em 0;
+	margin: 1.5rem 1.5rem 0;
+}
+
+hr {
+	
 }
 
 .page-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5rem 0 0;
 }
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 }

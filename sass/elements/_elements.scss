@@ -10,6 +10,15 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	.site {
+		width: 100%;
+	}
+}
+
+.site-content {
+	margin: 4.8125rem auto 0; /*  77 / 16  */
+	max-width: 800px;
+
 }
 
 blockquote, q {

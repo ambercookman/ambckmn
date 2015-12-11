@@ -8,14 +8,16 @@ $color__background-ins: #fff9c0;
 $gradient-color1: rgba(192,72,72,0.9);
 $gradient-color2: rgba(72,0,72,0.9);
 
-$color-ambers-orange: rgb(192,72,72);
-$color-ambers-purple: rgb(72,0,72);
+$color__ambers-orange: rgb(192,72,72);
+$color__ambers-purple: rgb(72,0,72);
+
+$color__header-bg: rgba(255,255,255,.9);
 
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: $color-ambers-orange;
-$color__link-visited: $color-ambers-orange;
+$color__link: $color__ambers-orange;
+$color__link-visited: $color__ambers-orange;
 $color__link-hover: rgba(192,72,72,0.5);
 $color__text-main: #404040;
 

@@ -1,5 +1,8 @@
 .site-header {
-	height: 5.125rem; /*  82 / 16  */
+	height: 4.8125rem; /*  77 / 16  */
+	margin-top: -4.8125rem;
 	@include clearfix-after;
-	// background: green;
+	background: $color__header-bg;
+	position: fixed;
+	width: 100%;
 }

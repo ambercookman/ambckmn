@@ -1,17 +1,37 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-}
-
-.site-description,
-.entry-title {
 	font-family: $font__headings;
 	letter-spacing: 0.0625rem; /*  1 / 16  */
+}
+
+h1 {
+	@include font-size(1.566);
+}
+
+h2 {
+	@include font-size(1.392);
+}
+
+h3 {
+	@include font-size(1.238);
+}
+
+h4 {
+	@include font-size(1.1);
+}
+
+h5 {
+	@include font-size(0.978);
+}
+
+h6 {
+	@include font-size(0.869);
 }
 
 .site-title {
 	font-family: $font__logo;
 	width: 14.06rem; /*  225 / 16 -- minus .0025 */
-	margin: 0.625rem 0.625rem 0.3125rem 0; /*  10 / 16 = 0.625,  5 / 16 = 0.3125  */
+	margin: 0.625rem 1.4rem 0.3125rem 0; /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, just looked better minus .1  */
 	// background: blue;
 }
 
@@ -27,8 +47,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-description {
+	font-family: $font__headings;
+	letter-spacing: 0.0625rem; /*  1 / 16  */
 	width: 10.4375rem; /*  167 / 16  */
-	margin: -0.625rem 0.625rem 0 0; /*  10 / 16  */
+	margin: -0.625rem 1.4rem 0 0; /*  10 / 16  */
 	// background: red;
 	clear: right;
 }
+
+/*  1024 / 16  */
+@media screen and (min-width: 64rem) {
+	.main-navigation {
+		margin-left: 5%;
+	}
+	.site-title,
+	.site-description {
+		margin-right: 7%;
+	}
+}
+
+
+
+

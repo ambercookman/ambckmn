@@ -264,20 +264,41 @@ textarea,
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
-
-.site-description,
-.entry-title {
+  clear: both;
   font-family: "ostrich_sansmedium", sans-serif;
   letter-spacing: 0.0625rem;
   /*  1 / 16  */ }
+
+h1 {
+  font-size: 25.056px;
+  font-size: 1.566rem; }
+
+h2 {
+  font-size: 22.272px;
+  font-size: 1.392rem; }
+
+h3 {
+  font-size: 19.808px;
+  font-size: 1.238rem; }
+
+h4 {
+  font-size: 17.6px;
+  font-size: 1.1rem; }
+
+h5 {
+  font-size: 15.648px;
+  font-size: 0.978rem; }
+
+h6 {
+  font-size: 13.904px;
+  font-size: 0.869rem; }
 
 .site-title {
   font-family: "sansumiregular", sans-serif;
   width: 14.06rem;
   /*  225 / 16 -- minus .0025 */
-  margin: 0.625rem 0.625rem 0.3125rem 0;
-  /*  10 / 16 = 0.625,  5 / 16 = 0.3125  */ }
+  margin: 0.625rem 1.4rem 0.3125rem 0;
+  /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, just looked better minus .1  */ }
 
 .site-title,
 .site-description {
@@ -290,11 +311,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.392rem; }
 
 .site-description {
+  font-family: "ostrich_sansmedium", sans-serif;
+  letter-spacing: 0.0625rem;
+  /*  1 / 16  */
   width: 10.4375rem;
   /*  167 / 16  */
-  margin: -0.625rem 0.625rem 0 0;
+  margin: -0.625rem 1.4rem 0 0;
   /*  10 / 16  */
   clear: right; }
+
+/*  1024 / 16  */
+@media screen and (min-width: 64rem) {
+  .main-navigation {
+    margin-left: 5%; }
+  .site-title,
+  .site-description {
+    margin-right: 7%; } }
 
 p {
   margin-bottom: 1.5em; }
@@ -339,9 +371,13 @@ big {
 # Layout
 --------------------------------------------------------------*/
 .site-header {
-  height: 5.125rem;
-  /*  82 / 16  */
-  clear: both; }
+  height: 4.8125rem;
+  /*  77 / 16  */
+  margin-top: -4.8125rem;
+  clear: both;
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  width: 100%; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -358,6 +394,13 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
+  body .site {
+    width: 100%; }
+
+.site-content {
+  margin: 4.8125rem auto 0;
+  /*  77 / 16  */
+  max-width: 800px; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -415,7 +458,7 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  background: #e6e6e6;
+  background: rgba(255, 255, 255, 0.9);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 17.6px;
@@ -440,17 +483,17 @@ input[type="submit"] {
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
 
 button.menu-toggle {
-  background: #fff;
+  background: transparent;
   font-family: "ostrich_sansmedium", sans-serif;
   letter-spacing: 0.0625rem;
   /*  1 / 16  */
   box-shadow: none;
   text-shadow: none;
-  color: #000;
+  color: #111;
   border: none;
   float: left;
-  margin: -33px 0 0 3%;
-  /*  -85 / 16  */ }
+  margin: -2.0625rem 0 0 0.625rem;
+  /*  -33 / 16 = -2.0625,  10 / 16 = 0.625  */ }
   button.menu-toggle:after {
     content: "";
     display: block;
@@ -547,28 +590,32 @@ a {
 
 /* Small menu. */
 button.menu-toggle {
-  height: 2.5em;
+  height: 2.5rem;
   /*  40 / 16  */ }
 
 .menu-toggle,
 .main-navigation.toggled {
-  margin-bottom: 0.9375em;
-  /*  15 / 16  */ }
+  margin-bottom: 0.9375rem;
+  /*  15 / 16  */
+  background: rgba(255, 255, 255, 0.9); }
   .menu-toggle ul.nav-menu,
   .main-navigation.toggled ul.nav-menu {
     display: block; }
     .menu-toggle ul.nav-menu li,
     .main-navigation.toggled ul.nav-menu li {
       width: 100%;
-      padding: 0.1875em 0 0.1875em 1.5em;
+      padding: 0.1875rem 0 0.1875rem 1.5rem;
       /*  3 / 16  */ }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
+/*  760 / 16 = 47.5  
+@media screen and (min-width: 47.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+} */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -687,7 +734,7 @@ button.menu-toggle {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5rem; }
 
 .entry-title {
   border-bottom: black dashed 1px;
@@ -707,18 +754,22 @@ button.menu-toggle {
   display: inline; }
 
 .entry-header {
-  margin: 0 1.6em; }
+  margin: 0 1.6rem; }
+
+.entry-meta .byline {
+  font-size: 13.904px;
+  font-size: 0.869rem; }
 
 .entry-content {
-  margin: 1.5em 1.5em 0; }
+  margin: 1.5rem 1.5rem 0; }
 
 .page-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1.5rem 0 0; }
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5rem; }
 
 /*--------------------------------------------------------------
 ## Asides
