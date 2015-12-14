@@ -802,12 +802,25 @@ button.menu-toggle {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.post-navigation .nav-links {
+  margin: 0 1.5rem 0 1.5rem; }
+
+.site-footer {
+  padding: 0.869rem 1.5rem; }
+  .site-footer .site-info {
+    text-align: center;
+    font-size: 12.096px;
+    font-size: 0.756rem; }
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none; }
+
+.widget-area {
+  margin: 0 1.5rem 0 1.5rem; }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -817,6 +830,9 @@ button.menu-toggle {
 
 .bypostauthor {
   display: block; }
+
+.comments-area {
+  margin: 0 1.5rem 0 1.5rem; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

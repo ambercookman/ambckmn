@@ -802,8 +802,10 @@ button.menu-toggle {
   clear: both;
   margin: 0 0 1.5rem; }
 
-.post-navigation .nav-links {
-  margin: 0 1.5rem 0 1.5rem; }
+nav .nav-links > .nav-previous,
+nav .nav-links > .nav-next {
+  margin: 0 1.5rem 0 1.5rem;
+  width: 35%; }
 
 .site-footer {
   padding: 0.869rem 1.5rem; }
