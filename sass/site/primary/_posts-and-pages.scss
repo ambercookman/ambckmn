@@ -96,8 +96,40 @@ nav .nav-links {
 	padding: 0.869rem 1.5rem;
 
 	.site-info {
-	text-align: center;
-	@include font-size(0.756);
+		@include font-size(0.687);
+		text-align: center;
+
+		> .sep {
+			display: none;
+		}
+
+		> .wp-credit,
+		> .theme-credit {
+			display: inline-block;
+		}
+		
+		/*  350 / 16 = 21.875  */
+		@media screen and (min-width: 21.875em) {
+			> .sep {
+				display: inline;
+			}
+		}
+
+		/*  400 / 16 = 25  */
+		@media screen and (min-width: 25em) {
+			text-align: center;
+			@include font-size(0.773);
+
+			> .wp-credit,
+			> .theme-credit {
+				display: inline;
+			}
+		}
+
+		/*  800 / 16 = 50  */
+		@media screen and (min-width: 50em) {
+			@include font-size(0.869);
+		}
 	}
 }
 

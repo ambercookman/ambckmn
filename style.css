@@ -913,9 +913,32 @@ nav .nav-links > .nav-next {
 .site-footer {
   padding: 0.869rem 1.5rem; }
   .site-footer .site-info {
+    font-size: 10.992px;
+    font-size: 0.687rem;
     text-align: center;
-    font-size: 12.096px;
-    font-size: 0.756rem; }
+    /*  350 / 16 = 21.875  */
+    /*  400 / 16 = 25  */
+    /*  800 / 16 = 50  */ }
+    .site-footer .site-info > .sep {
+      display: none; }
+    .site-footer .site-info > .wp-credit,
+    .site-footer .site-info > .theme-credit {
+      display: inline-block; }
+    @media screen and (min-width: 21.875em) {
+      .site-footer .site-info > .sep {
+        display: inline; } }
+    @media screen and (min-width: 25em) {
+      .site-footer .site-info {
+        text-align: center;
+        font-size: 12.368px;
+        font-size: 0.773rem; }
+        .site-footer .site-info > .wp-credit,
+        .site-footer .site-info > .theme-credit {
+          display: inline; } }
+    @media screen and (min-width: 50em) {
+      .site-footer .site-info {
+        font-size: 13.904px;
+        font-size: 0.869rem; } }
 
 /*--------------------------------------------------------------
 ## Asides
