@@ -400,7 +400,8 @@ big {
   clear: both;
   background: rgba(255, 255, 255, 0.9);
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -426,15 +427,24 @@ body {
   max-width: 800px; }
 
 blockquote, q {
-  quotes: "" ""; }
+  quotes: "" "";
+  position: relative; }
   blockquote:before, blockquote:after, q:before, q:after {
     content: ""; }
+  blockquote:before, q:before {
+    position: absolute;
+    background-image: -webkit-linear-gradient(rgba(72, 0, 72, 0.9), rgba(192, 72, 72, 0.9));
+    background-image: linear-gradient(rgba(72, 0, 72, 0.9), rgba(192, 72, 72, 0.9));
+    top: 5px;
+    bottom: -3px;
+    left: -10px;
+    width: 3px; }
 
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.75), transparent);
-  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75), transparent); }
+  background-image: -webkit-linear-gradient(left, rgba(72, 0, 72, 0), rgba(72, 0, 72, 0.9), rgba(72, 0, 72, 0));
+  background-image: linear-gradient(to right, rgba(72, 0, 72, 0), rgba(72, 0, 72, 0.9), rgba(72, 0, 72, 0)); }
 
 ul, ol {
   margin: 0 0 1.5em 3em; }
@@ -526,6 +536,16 @@ button.menu-toggle {
     position: relative;
     left: 30px;
     top: -25px; }
+
+.main-navigation.toggled > button.menu-toggle:after {
+  content: "";
+  display: block;
+  background: url("img/nav-arrow-up.png") center/80% no-repeat;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 30px;
+  top: -25px; }
 
 input[type="text"],
 input[type="email"],

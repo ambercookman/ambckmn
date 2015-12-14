@@ -64,11 +64,14 @@ h6 {
 	clear: right;
 }
 
+
+
 /*  1024 / 16  */
 @media screen and (min-width: 64rem) {
 	.main-navigation {
 		margin-left: 5%;
 	}
+	
 	.site-title,
 	.site-description {
 		margin-right: 7%;

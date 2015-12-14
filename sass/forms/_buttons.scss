@@ -46,3 +46,16 @@ button.menu-toggle {
 		top: -25px;
 	}
 }
+
+.main-navigation.toggled > button.menu-toggle {
+	&:after {
+		content: "";
+		display: block;
+		background: url("img/nav-arrow-up.png") center/80% no-repeat;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		left: 30px;
+		top: -25px;
+	}
+}
