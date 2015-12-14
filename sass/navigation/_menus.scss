@@ -75,7 +75,7 @@ button.menu-toggle {
 
 .menu-toggle,
 .main-navigation.toggled {
-	margin-bottom: 0.9375rem; /*  15 / 16  */
+	padding-bottom: 0.9375rem; /*  15 / 16  */
 	background: $color__header-bg;
 
 	ul.nav-menu {
@@ -83,7 +83,21 @@ button.menu-toggle {
 
 		> li.menu-item {
 			width: 100%;
-			padding: 0.1875rem 0 0.1875rem 3.2rem; /*  3 / 16, the 3.2 is to get link text to line up with menu arrow icon  */
+			a {
+				padding: 0.1875rem 0 0.1875rem 3.2rem; /*  3 / 16, the 3.2 is to get link text to line up with menu arrow icon  */
+			}
+		}
+		> li.menu-item a:hover,
+		> li.menu-item a:focus {
+			font-weight: bold;
+		}
+		.current-menu-item a {
+			text-decoration: line-through;
+			font-weight: bold;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
 		}
 
 		/*  Hover Brackets Effect in Chrome/FF  */
