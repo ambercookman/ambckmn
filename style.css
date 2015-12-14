@@ -259,9 +259,19 @@ textarea,
 .posted-on {
   color: #404040;
   font-family: "roboto_condensedlight", sans-serif;
-  font-size: 17.6px;
-  font-size: 1.1rem;
-  line-height: 1.5; }
+  font-size: 15.648px;
+  font-size: 0.978rem;
+  line-height: 1.5;
+  /*  400 / 16 = 25  */ }
+  @media screen and (min-width: 25em) {
+    body,
+    button,
+    input,
+    select,
+    textarea,
+    .posted-on {
+      font-size: 17.6px;
+      font-size: 1.1rem; } }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
@@ -297,8 +307,13 @@ h6 {
   font-family: "sansumiregular", sans-serif;
   width: 14.06rem;
   /*  225 / 16 -- minus .0025 */
-  margin: 0.625rem 1.4rem 0.3125rem 0;
-  /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, just looked better minus .1  */ }
+  margin: 0.625rem 1rem 0.3125rem 0;
+  /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
+  /*  400 / 16 = 25  */ }
+  @media screen and (min-width: 25em) {
+    .site-title {
+      margin-right: 1.7rem;
+      /* site-wide use 1.5, this is to work with title specifically */ } }
 
 .site-title,
 .site-description {
@@ -307,11 +322,19 @@ h6 {
 
 .site-title,
 .entry-title {
-  font-size: 22.272px;
-  font-size: 1.392rem; }
+  font-size: 19.808px;
+  font-size: 1.238rem;
+  /*  400 / 16 = 25  */ }
+  @media screen and (min-width: 25em) {
+    .site-title,
+    .entry-title {
+      font-size: 22.272px;
+      font-size: 1.392rem; } }
 
 .site-description {
   font-family: "ostrich_sansmedium", sans-serif;
+  font-size: 17.6px;
+  font-size: 1.1rem;
   letter-spacing: 0.0625rem;
   /*  1 / 16  */
   width: 10.4375rem;

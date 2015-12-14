@@ -31,8 +31,12 @@ h6 {
 .site-title {
 	font-family: $font__logo;
 	width: 14.06rem; /*  225 / 16 -- minus .0025 */
-	margin: 0.625rem 1.4rem 0.3125rem 0; /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, just looked better minus .1  */
-	// background: blue;
+	margin: 0.625rem 1rem 0.3125rem 0; /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
+	
+	/*  400 / 16 = 25  */
+	@media screen and (min-width: 25em) {
+		margin-right: 1.7rem; /* site-wide use 1.5, this is to work with title specifically */
+	}
 }
 
 .site-title,
@@ -43,15 +47,20 @@ h6 {
 
 .site-title,
 .entry-title {
-	@include font-size(1.392);
+	@include font-size(1.238);
+
+	/*  400 / 16 = 25  */
+	@media screen and (min-width: 25em) {
+		@include font-size(1.392);
+	}
 }
 
 .site-description {
 	font-family: $font__headings;
+	@include font-size(1.1);
 	letter-spacing: 0.0625rem; /*  1 / 16  */
 	width: 10.4375rem; /*  167 / 16  */
 	margin: -0.625rem 1.4rem 0 0; /*  10 / 16  */
-	// background: red;
 	clear: right;
 }
 
