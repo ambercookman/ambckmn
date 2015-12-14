@@ -81,10 +81,36 @@ button.menu-toggle {
 	ul.nav-menu {
 		display: block;
 
-		li {
+		> li.menu-item {
 			width: 100%;
-			padding: 0.1875rem 0 0.1875rem 1.5rem; /*  3 / 16  */
+			padding: 0.1875rem 0 0.1875rem 3.2rem; /*  3 / 16, the 3.2 is to get link text to line up with menu arrow icon  */
 		}
+
+		/*  Hover Brackets Effect in Chrome/FF  */
+		> li.menu-item a:before,
+		> li.menu-item a:after {
+			display: inline-block;
+			opacity: 0;
+			transition: transform 0.3s, opacity 0.2s;
+		}
+		> li.menu-item a:before {
+			margin-right: 10px;
+			content: '[';
+			transform: translateX(20px);
+		}
+		> li.menu-item a:after {
+			margin-left: 10px;
+			content: ']';
+			transform: translateX(-20px);
+		}
+		> li.menu-item a:hover:before,
+		> li.menu-item a:hover:after,
+		> li.menu-item a:focus:before,
+		> li.menu-item a:focus:after {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+		/* End hover brackets effect */
 
 	}
 

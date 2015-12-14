@@ -567,11 +567,19 @@ a {
   a:visited {
     color: #c04848; }
   a:hover, a:focus, a:active {
-    color: rgba(192, 72, 72, 0.5); }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
+    color: #c04848; }
+  a:focus, a:hover, a:active {
     outline: 0; }
+
+.entry-content a:focus, .entry-content a:hover, .entry-content a:active,
+.site-title a:focus,
+.site-title a:hover,
+.site-title a:active {
+  -webkit-background-clip: text;
+  color: #fff;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(left, rgba(192, 72, 72, 0.9) 10%, rgba(72, 0, 72, 0.9) 90%); }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -623,12 +631,47 @@ button.menu-toggle {
   background: rgba(255, 255, 255, 0.9); }
   .menu-toggle ul.nav-menu,
   .main-navigation.toggled ul.nav-menu {
-    display: block; }
-    .menu-toggle ul.nav-menu li,
-    .main-navigation.toggled ul.nav-menu li {
+    display: block;
+    /*  Hover Brackets Effect in Chrome/FF  */
+    /* End hover brackets effect */ }
+    .menu-toggle ul.nav-menu > li.menu-item,
+    .main-navigation.toggled ul.nav-menu > li.menu-item {
       width: 100%;
-      padding: 0.1875rem 0 0.1875rem 1.5rem;
-      /*  3 / 16  */ }
+      padding: 0.1875rem 0 0.1875rem 3.2rem;
+      /*  3 / 16, the 3.2 is to get link text to line up with menu arrow icon  */ }
+    .menu-toggle ul.nav-menu > li.menu-item a:before,
+    .menu-toggle ul.nav-menu > li.menu-item a:after,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:before,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:after {
+      display: inline-block;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+      transition: opacity 0.2s, -webkit-transform 0.3s;
+      transition: transform 0.3s, opacity 0.2s;
+      transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s; }
+    .menu-toggle ul.nav-menu > li.menu-item a:before,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:before {
+      margin-right: 10px;
+      content: '[';
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px); }
+    .menu-toggle ul.nav-menu > li.menu-item a:after,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:after {
+      margin-left: 10px;
+      content: ']';
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px); }
+    .menu-toggle ul.nav-menu > li.menu-item a:hover:before,
+    .menu-toggle ul.nav-menu > li.menu-item a:hover:after,
+    .menu-toggle ul.nav-menu > li.menu-item a:focus:before,
+    .menu-toggle ul.nav-menu > li.menu-item a:focus:after,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:hover:before,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:hover:after,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:focus:before,
+    .main-navigation.toggled ul.nav-menu > li.menu-item a:focus:after {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px); }
 
 /*  760 / 16 = 47.5  
 @media screen and (min-width: 47.5em) {
