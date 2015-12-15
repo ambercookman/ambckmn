@@ -445,8 +445,8 @@ blockquote, q {
     content: ""; }
   blockquote:before, q:before {
     position: absolute;
-    background-image: -webkit-linear-gradient(rgba(72, 0, 72, 0.9), rgba(192, 72, 72, 0.9));
-    background-image: linear-gradient(rgba(72, 0, 72, 0.9), rgba(192, 72, 72, 0.9));
+    background-image: -webkit-linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8));
+    background-image: linear-gradient(rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8));
     top: 5px;
     bottom: 1px;
     left: -10px;
@@ -455,8 +455,8 @@ blockquote, q {
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(72, 0, 72, 0), rgba(72, 0, 72, 0.9), rgba(72, 0, 72, 0));
-  background-image: linear-gradient(to right, rgba(72, 0, 72, 0), rgba(72, 0, 72, 0.9), rgba(72, 0, 72, 0)); }
+  background-image: -webkit-linear-gradient(left, rgba(72, 0, 72, 0), rgba(72, 0, 72, 0.8), rgba(72, 0, 72, 0));
+  background-image: linear-gradient(to right, rgba(72, 0, 72, 0), rgba(72, 0, 72, 0.8), rgba(72, 0, 72, 0)); }
 
 ul, ol {
   margin: 0 0 1.566rem 0; }
@@ -635,7 +635,7 @@ a {
   color: #fff;
   font-weight: bold;
   -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(left, #c04848 10%, #480048 90%); }
+  background-image: -webkit-linear-gradient(left, rgba(192, 72, 72, 0.8) 10%, rgba(72, 0, 72, 0.8) 90%); }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -706,7 +706,7 @@ button.menu-toggle {
     .main-navigation.toggled ul.nav-menu .current-menu-item a {
       padding: 5px;
       color: #fff;
-      background: #c04848; }
+      background: rgba(192, 72, 72, 0.8); }
     .menu-toggle ul.nav-menu > li.menu-item a:before,
     .menu-toggle ul.nav-menu > li.menu-item a:after,
     .main-navigation.toggled ul.nav-menu > li.menu-item a:before,
@@ -750,24 +750,71 @@ button.menu-toggle {
 		display: block;
 	}
 } */
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
+.comment-navigation,
+.posts-navigation .nav-links {
+  /* CSS below tied to post nav on main blog pages, not single pages.
+	   the text in the original loop was modified to include the angle
+	   brackets seen on the page, and add the class names 'alignleft' and
+	   'alignright'. This was modified in the "get_the_posts_navigation"
+	   function starting on line 2325 in link-template.php, in the /wp-includes
+	   folder (next to /wp-content, which is where this theme is held). */ }
+  .site-main .comment-navigation, .site-main
+  .posts-navigation .nav-links {
+    margin: 0 0 1.5em;
+    overflow: hidden; }
+  .comment-navigation > .nav-previous.alignleft,
+  .comment-navigation > .nav-next.alignright,
+  .posts-navigation .nav-links > .nav-previous.alignleft,
+  .posts-navigation .nav-links > .nav-next.alignright {
+    padding: 5px; }
+    .comment-navigation > .nav-previous.alignleft:hover, .comment-navigation > .nav-previous.alignleft:focus, .comment-navigation > .nav-previous.alignleft:active,
+    .comment-navigation > .nav-next.alignright:hover,
+    .comment-navigation > .nav-next.alignright:focus,
+    .comment-navigation > .nav-next.alignright:active,
+    .posts-navigation .nav-links > .nav-previous.alignleft:hover,
+    .posts-navigation .nav-links > .nav-previous.alignleft:focus,
+    .posts-navigation .nav-links > .nav-previous.alignleft:active,
+    .posts-navigation .nav-links > .nav-next.alignright:hover,
+    .posts-navigation .nav-links > .nav-next.alignright:focus,
+    .posts-navigation .nav-links > .nav-next.alignright:active {
+      color: #fff;
+      background: rgba(192, 72, 72, 0.8); }
+      .comment-navigation > .nav-previous.alignleft:hover a, .comment-navigation > .nav-previous.alignleft:focus a, .comment-navigation > .nav-previous.alignleft:active a,
+      .comment-navigation > .nav-next.alignright:hover a,
+      .comment-navigation > .nav-next.alignright:focus a,
+      .comment-navigation > .nav-next.alignright:active a,
+      .posts-navigation .nav-links > .nav-previous.alignleft:hover a,
+      .posts-navigation .nav-links > .nav-previous.alignleft:focus a,
+      .posts-navigation .nav-links > .nav-previous.alignleft:active a,
+      .posts-navigation .nav-links > .nav-next.alignright:hover a,
+      .posts-navigation .nav-links > .nav-next.alignright:focus a,
+      .posts-navigation .nav-links > .nav-next.alignright:active a {
+        color: #fff; }
+  .comment-navigation > div.nav-previous.alignleft,
+  .posts-navigation .nav-links > div.nav-previous.alignleft {
+    width: 6.25rem;
+    /*  100 / 16 = 6.25 */ }
+  .comment-navigation > div.nav-next.alignright,
+  .posts-navigation .nav-links > div.nav-next.alignright {
+    width: 6.875rem;
+    /*  110 / 16 = 6.875  */ }
+
 .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+  margin: 0 1.5em 0; }
+  .post-navigation > .nav-previous,
+  .post-navigation > .nav-next {
+    padding: 5px; }
+    .post-navigation > .nav-previous:hover, .post-navigation > .nav-previous:focus, .post-navigation > .nav-previous:active,
+    .post-navigation > .nav-next:hover,
+    .post-navigation > .nav-next:focus,
+    .post-navigation > .nav-next:active {
+      color: #fff;
+      background: rgba(192, 72, 72, 0.8); }
+      .post-navigation > .nav-previous:hover a, .post-navigation > .nav-previous:focus a, .post-navigation > .nav-previous:active a,
+      .post-navigation > .nav-next:hover a,
+      .post-navigation > .nav-next:focus a,
+      .post-navigation > .nav-next:active a {
+        color: #fff; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -872,7 +919,7 @@ button.menu-toggle {
 
 .entry-title {
   margin: 10px auto 5px;
-  color: rgba(192, 72, 72, 0.9); }
+  color: rgba(192, 72, 72, 0.8); }
   .entry-title > a {
     padding: 5px; }
   .entry-title > a:hover,
@@ -895,8 +942,8 @@ button.menu-toggle {
 .entry-header hr {
   border: 0;
   height: 2px;
-  background-image: -webkit-linear-gradient(left, rgba(192, 72, 72, 0.9), rgba(72, 0, 72, 0.9), rgba(192, 72, 72, 0.9));
-  background-image: linear-gradient(to right, rgba(192, 72, 72, 0.9), rgba(72, 0, 72, 0.9), rgba(192, 72, 72, 0.9)); }
+  background-image: -webkit-linear-gradient(left, rgba(192, 72, 72, 0.8), rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8));
+  background-image: linear-gradient(to right, rgba(192, 72, 72, 0.8), rgba(72, 0, 72, 0.8), rgba(192, 72, 72, 0.8)); }
 
 .byline,
 .updated:not(.published) {

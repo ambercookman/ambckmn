@@ -94,11 +94,7 @@ button.menu-toggle {
 		.current-menu-item a {
 			padding: 5px;
 			color: $color__background-body;
-			background: $color__link;
-			&:hover,
-			&:focus {
-				
-			}
+			background: $gradient-color1;
 		}
 
 		/*  Hover Brackets Effect in Chrome/FF  */
@@ -142,22 +138,74 @@ button.menu-toggle {
 } */
 
 .comment-navigation,
-.posts-navigation,
-.post-navigation {
+.posts-navigation .nav-links {
 
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+	/* CSS below tied to post nav on main blog pages, not single pages.
+	   the text in the original loop was modified to include the angle
+	   brackets seen on the page, and add the class names 'alignleft' and
+	   'alignright'. This was modified in the "get_the_posts_navigation"
+	   function starting on line 2325 in link-template.php, in the /wp-includes
+	   folder (next to /wp-content, which is where this theme is held). */
+	> .nav-previous.alignleft,
+	> .nav-next.alignright {
+		padding: 5px;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__background-body;
+			background: $gradient-color1;
+			a {
+				color: $color__background-body;
+			}
+		}
+	}
+	> div.nav-previous.alignleft {
+		width: 6.25rem; /*  100 / 16 = 6.25 */
+	}
+	> div.nav-next.alignright {
+		width: 6.875rem; /*  110 / 16 = 6.875  */
 	}
 }
+
+.post-navigation {
+	margin: 0 1.5em 0;
+
+	> .nav-previous,
+	> .nav-next {
+		padding: 5px;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color__background-body;
+			background: $gradient-color1;
+			a {
+				color: $color__background-body;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
