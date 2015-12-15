@@ -128,9 +128,9 @@ button.menu-toggle {
 }
 
 .main-navigation.toggled {
-	/*  1024 / 16 = 64  */
-	@media screen and (min-width: 64em) {
-		max-width: 26.5625rem; /*  425 / 16  */
+	/*  960 / 16 = 60  */
+	@media screen and (min-width: 60em) {
+		max-width: 25rem; /*  400 / 16  */
 	}
 }
 
