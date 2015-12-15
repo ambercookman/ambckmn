@@ -92,11 +92,12 @@ button.menu-toggle {
 			font-weight: bold;
 		}
 		.current-menu-item a {
-			text-decoration: line-through;
-			font-weight: bold;
+			padding: 5px;
+			color: $color__background-body;
+			background: $color__link;
 			&:hover,
 			&:focus {
-				text-decoration: none;
+				
 			}
 		}
 

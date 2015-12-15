@@ -7,7 +7,16 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 3.175em;
+	@include font-size(0.978);
+
+	@media screen and (min-width: 37.5em) {
+		margin: 0 4.019em;
+		@include font-size(1.1);
+	}
+	@media screen and (min-width: 50em) {
+		margin: 0 4.521em;
+	}
 }
 
 address {

@@ -32,7 +32,7 @@ h6 {
 	font-family: $font__logo;
 	width: 14.06rem; /*  225 / 16 -- minus .0025 */
 	letter-spacing: 0.0625rem; /*  1 / 16  */
-	margin: 0.625rem 1rem 0.3125rem 0; /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
+	margin: 0.75rem 1rem 0.3125rem 0; /*  12 / 16 = 0.75,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
 	
 	/*  400 / 16 = 25  */
 	@media screen and (min-width: 25em) {
