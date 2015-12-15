@@ -5,26 +5,13 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: $color__border-button;
 	background: $color__header-bg;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
 	color: rgba(0, 0, 0, .8);
 	@include font-size(1.1);
 	line-height: 1;
 	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-
-	&:hover {
-		border-color: $color__border-button-hover;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-	}
-
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-	}
 }
 
-button.menu-toggle {
+button.menu-toggle{
 	background: transparent;
 	font-family: $font__headings;
 	letter-spacing: 0.0625rem; /*  1 / 16  */
@@ -34,8 +21,9 @@ button.menu-toggle {
 	border: none;
 	float: left;
 	margin: -2.0625rem 0 0 0.625rem; /*  -33 / 16 = -2.0625,  10 / 16 = 0.625  */
+}
 
-	&:after {
+button.menu-toggle:after {
 		content: "";
 		display: block;
 		background: url("img/nav-arrow.png") center/80% no-repeat;
@@ -44,7 +32,6 @@ button.menu-toggle {
 		position: relative;
 		left: 30px;
 		top: -25px;
-	}
 }
 
 .main-navigation.toggled > button.menu-toggle {
@@ -59,3 +46,38 @@ button.menu-toggle {
 		top: -25px;
 	}
 }
+
+#primary-menu .menu-search-form > p > input[type="submit"]{
+	border: 1px solid $color__text-main;
+	background: $color__text-main;
+	color: white;
+	padding: .6em 1em .5em;
+	&:hover,
+	&:active,
+	&:focus {
+		background: white;
+		color: $color__text-main;
+	}
+
+	@media screen and (min-width: 25em) {
+		padding-bottom: .55em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

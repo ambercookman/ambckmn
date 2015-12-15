@@ -307,6 +307,8 @@ h6 {
   font-family: "sansumiregular", sans-serif;
   width: 14.06rem;
   /*  225 / 16 -- minus .0025 */
+  letter-spacing: 0.0625rem;
+  /*  1 / 16  */
   margin: 0.625rem 1rem 0.3125rem 0;
   /*  10 / 16 = 0.625,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
   /*  400 / 16 = 25  */ }
@@ -492,28 +494,11 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 17.6px;
   font-size: 1.1rem;
   line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+  padding: .6em 1em .4em; }
 
 button.menu-toggle {
   background: transparent;
@@ -527,15 +512,16 @@ button.menu-toggle {
   float: left;
   margin: -2.0625rem 0 0 0.625rem;
   /*  -33 / 16 = -2.0625,  10 / 16 = 0.625  */ }
-  button.menu-toggle:after {
-    content: "";
-    display: block;
-    background: url("img/nav-arrow.png") center/80% no-repeat;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    left: 30px;
-    top: -25px; }
+
+button.menu-toggle:after {
+  content: "";
+  display: block;
+  background: url("img/nav-arrow.png") center/80% no-repeat;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 30px;
+  top: -25px; }
 
 .main-navigation.toggled > button.menu-toggle:after {
   content: "";
@@ -547,22 +533,28 @@ button.menu-toggle {
   left: 30px;
   top: -25px; }
 
+#primary-menu .menu-search-form > p > input[type="submit"] {
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: .6em 1em .5em; }
+  #primary-menu .menu-search-form > p > input[type="submit"]:hover, #primary-menu .menu-search-form > p > input[type="submit"]:active, #primary-menu .menu-search-form > p > input[type="submit"]:focus {
+    background: white;
+    color: black; }
+  @media screen and (min-width: 25em) {
+    #primary-menu .menu-search-form > p > input[type="submit"] {
+      padding-bottom: .55em; } }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
+  color: #404040;
+  border: 1px solid black;
+  background: transparent;
+  padding: 5px; }
 
 input[type="text"],
 input[type="email"],
@@ -574,6 +566,19 @@ input[type="search"] {
 textarea {
   padding-left: 3px;
   width: 100%; }
+
+#primary-menu .menu-search-form {
+  margin: o auto; }
+  #primary-menu .menu-search-form > p {
+    margin: 0 0 0 3.5em; }
+    #primary-menu .menu-search-form > p > input[type="text"] {
+      color: #404040;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid black;
+      background: transparent;
+      padding: 5px; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -911,9 +916,32 @@ nav .nav-links > .nav-next {
 .site-footer {
   padding: 0.869rem 1.5rem; }
   .site-footer .site-info {
+    font-size: 10.992px;
+    font-size: 0.687rem;
     text-align: center;
-    font-size: 12.096px;
-    font-size: 0.756rem; }
+    /*  350 / 16 = 21.875  */
+    /*  400 / 16 = 25  */
+    /*  800 / 16 = 50  */ }
+    .site-footer .site-info > .sep {
+      display: none; }
+    .site-footer .site-info > .wp-credit,
+    .site-footer .site-info > .theme-credit {
+      display: inline-block; }
+    @media screen and (min-width: 21.875em) {
+      .site-footer .site-info > .sep {
+        display: inline; } }
+    @media screen and (min-width: 25em) {
+      .site-footer .site-info {
+        text-align: center;
+        font-size: 12.368px;
+        font-size: 0.773rem; }
+        .site-footer .site-info > .wp-credit,
+        .site-footer .site-info > .theme-credit {
+          display: inline; } }
+    @media screen and (min-width: 50em) {
+      .site-footer .site-info {
+        font-size: 13.904px;
+        font-size: 0.869rem; } }
 
 /*--------------------------------------------------------------
 ## Asides

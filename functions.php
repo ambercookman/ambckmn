@@ -157,3 +157,14 @@ add_filter( 'the_content_more_link', 'modify_read_more_link' );
 function modify_read_more_link() {
 return '<a class="more-link" href="' . get_permalink() . '">Continue Reading &raquo;</a>';
 }
+
+// Move search bar into nav primary menu 
+function add_search_to_wp_menu ( $items, $args ) {
+	if( 'primary' === $args -> theme_location ) {
+$items .= '<li class="menu-item menu-item-search">';
+$items .= '<form method="get" class="menu-search-form" action="' . get_bloginfo('home') . '/"><p><input class="text_input" type="text" value="Find It&#33;" name="s" id="s" onfocus="if (this.value == \'Find It&#33;\') {this.value = \'\';}" onblur="if (this.value == \'\') {this.value = \'Find It&#33;\';}" /><input type="submit" class="my-wp-search" id="searchsubmit" value="Search" /></p></form>';
+$items .= '</li>';
+	}
+return $items;
+}
+add_filter('wp_nav_menu_items','add_search_to_wp_menu',10,2);

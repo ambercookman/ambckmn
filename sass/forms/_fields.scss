@@ -4,13 +4,10 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-
-	&:focus {
-		color: $color__text-input-focus;
-	}
+	color: $color__text-main;
+	border: 1px solid $color__text-main;
+	background: transparent;
+	padding: 5px;
 }
 
 input[type="text"],
@@ -24,4 +21,23 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+#primary-menu .menu-search-form {
+	margin: o auto;
+	> p {
+		margin: 0 0 0 3.5em;
+		> input[type="text"] {
+			color: $color__text-main;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid $color__text-main;
+			background: transparent;
+			padding: 5px;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
 }
