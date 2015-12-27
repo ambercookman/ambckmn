@@ -742,11 +742,11 @@ button.menu-toggle {
               transform: translateX(0px); }
 
 .main-navigation.toggled {
-  /*  1024 / 16 = 64  */ }
-  @media screen and (min-width: 64em) {
+  /*  960 / 16 = 60  */ }
+  @media screen and (min-width: 60em) {
     .main-navigation.toggled {
-      max-width: 26.5625rem;
-      /*  425 / 16  */ } }
+      max-width: 25rem;
+      /*  400 / 16  */ } }
 
 /*  760 / 16 = 47.5  
 @media screen and (min-width: 47.5em) {
