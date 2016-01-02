@@ -11,6 +11,11 @@ ul {
 	padding-right: 0.625rem; /*  10 / 16  */
 }
 
+.about ul.wptreehouse-badges li.wptreehouse-badge:before {
+	content: none;
+	padding-right: 0;
+}
+
 ol {
 	list-style: decimal;
 	margin-left: 1.25rem;  /*  20 / 16 = 1.25  */

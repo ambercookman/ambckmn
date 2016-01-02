@@ -1,0 +1,32 @@
+// .about {
+// 	width: 60%;
+// }
+
+// .about + #secondary {
+// 	width: 35%;
+// 	float: right;
+// 	margin-top: -170px;
+// }
+
+/*  800 / 16 = 50  */
+@media screen and (min-width: 50em) {
+
+	.about .site-main {
+		width: 60%;
+		display: inline-block;
+		margin-right: 0;
+	}
+
+	.about .widget-area {
+		width: 34%;
+		float: right;
+		margin-right: 20px;
+		margin-left: 0;
+		padding-left: 20px;
+	}
+
+	.widget_wptreehouse_badges_widget .widget-title {
+		margin-top: 10px;
+	}
+
+}
