@@ -2,13 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	background: $color__header-bg;
-	color: rgba(0, 0, 0, .8);
 	@include font-size(1.1);
 	line-height: 1;
-	padding: .6em 1em .4em;
 }
 
 button.menu-toggle{
@@ -47,7 +42,7 @@ button.menu-toggle:after {
 	}
 }
 
-#primary-menu .menu-search-form > p > input[type="submit"]{
+input[type="submit"] {
 	border: 1px solid $color__text-main;
 	background: $color__text-main;
 	color: white;
@@ -62,6 +57,10 @@ button.menu-toggle:after {
 	@media screen and (min-width: 25em) {
 		padding-bottom: .55em;
 	}
+}
+
+.search-submit {
+	margin-left: -5px;
 }
 
 

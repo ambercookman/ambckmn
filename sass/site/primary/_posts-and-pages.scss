@@ -172,7 +172,27 @@ nav .nav-links {
 	}
 }
 
+.site-main .error-404 {
+	margin: 0 1.5rem;
 
+	> .page-content > .search-form {
+		margin: 0 auto 30px;
+		width: 265px;
+
+		// 600 / 16 = 37.5
+		@media screen and (min-width: 37.5em) {
+			margin: 0 0 30px;
+			width: auto;
+		}
+	}
+
+	> .page-content > img {
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 20px;
+	}
+}
 
 
 

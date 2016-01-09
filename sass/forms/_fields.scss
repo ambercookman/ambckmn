@@ -10,11 +10,9 @@ textarea {
 	padding: 5px;
 }
 
-input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type="password"] {
 	padding: 3px;
 }
 
@@ -23,21 +21,30 @@ textarea {
 	width: 100%;
 }
 
+input[type="text"],
+input[type="search"] {
+	color: $color__text-main;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid $color__text-main;
+	background: transparent;
+	padding: 5px;
+	&:focus {
+		outline: none;
+	}
+}
+
+select {
+	border: none;
+	&:focus {
+		outline: rgba(192,72,72,0.8) solid 3px;
+	}
+}
+
 #primary-menu .menu-search-form {
 	margin: o auto;
 	> p {
 		margin: 0 0 0 3.5em;
-		> input[type="text"] {
-			color: $color__text-main;
-			border-top: none;
-			border-left: none;
-			border-right: none;
-			border-bottom: 1px solid $color__text-main;
-			background: transparent;
-			padding: 5px;
-			&:focus {
-				outline: none;
-			}
-		}
 	}
 }

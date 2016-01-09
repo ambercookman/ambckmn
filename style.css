@@ -506,14 +506,9 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  background: rgba(255, 255, 255, 0.9);
-  color: rgba(0, 0, 0, 0.8);
   font-size: 17.6px;
   font-size: 1.1rem;
-  line-height: 1;
-  padding: .6em 1em .4em; }
+  line-height: 1; }
 
 button.menu-toggle {
   background: transparent;
@@ -548,17 +543,20 @@ button.menu-toggle:after {
   left: 30px;
   top: -25px; }
 
-#primary-menu .menu-search-form > p > input[type="submit"] {
+input[type="submit"] {
   border: 1px solid #404040;
   background: #404040;
   color: white;
   padding: .6em 1em .5em; }
-  #primary-menu .menu-search-form > p > input[type="submit"]:hover, #primary-menu .menu-search-form > p > input[type="submit"]:active, #primary-menu .menu-search-form > p > input[type="submit"]:focus {
+  input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
     background: white;
     color: #404040; }
   @media screen and (min-width: 25em) {
-    #primary-menu .menu-search-form > p > input[type="submit"] {
+    input[type="submit"] {
       padding-bottom: .55em; } }
+
+.search-submit {
+  margin-left: -5px; }
 
 input[type="text"],
 input[type="email"],
@@ -571,31 +569,37 @@ textarea {
   background: transparent;
   padding: 5px; }
 
-input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type="password"] {
   padding: 3px; }
 
 textarea {
   padding-left: 3px;
   width: 100%; }
 
+input[type="text"],
+input[type="search"] {
+  color: #404040;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #404040;
+  background: transparent;
+  padding: 5px; }
+  input[type="text"]:focus,
+  input[type="search"]:focus {
+    outline: none; }
+
+select {
+  border: none; }
+  select:focus {
+    outline: rgba(192, 72, 72, 0.8) solid 3px; }
+
 #primary-menu .menu-search-form {
   margin: o auto; }
   #primary-menu .menu-search-form > p {
     margin: 0 0 0 3.5em; }
-    #primary-menu .menu-search-form > p > input[type="text"] {
-      color: #404040;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      border-bottom: 1px solid #404040;
-      background: transparent;
-      padding: 5px; }
-      #primary-menu .menu-search-form > p > input[type="text"]:focus {
-        outline: none; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -925,6 +929,12 @@ button.menu-toggle {
 /*--------------------------------------------------------------
 ## Layout: Page -- About-Me
 --------------------------------------------------------------*/
+.widget_wptreehouse_badges_widget .widget-title {
+  color: #c04848; }
+
+.widget_wptreehouse_badges_widget .wptreehouse-badges {
+  padding-left: 3.75rem; }
+
 /*  800 / 16 = 50  */
 @media screen and (min-width: 50em) {
   .about .site-main {
@@ -934,11 +944,18 @@ button.menu-toggle {
   .about .widget-area {
     width: 34%;
     float: right;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     margin-left: 0;
-    padding-left: 20px; }
+    padding-left: 1.25rem; }
   .widget_wptreehouse_badges_widget .widget-title {
-    margin-top: 10px; } }
+    margin-top: 0.625rem;
+    text-align: center; }
+  .widget_wptreehouse_badges_widget .wptreehouse-badges {
+    padding-left: 1rem; }
+  .widget_wptreehouse_badges_widget .wptreehouse-badges .wptreehouse-badge {
+    width: 5rem;
+    height: 5.75rem;
+    margin: 0.3125rem  0.9375rem; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1082,6 +1099,21 @@ nav .nav-links > .nav-next {
       .site-footer .site-info {
         font-size: 13.904px;
         font-size: 0.869rem; } }
+
+.site-main .error-404 {
+  margin: 0 1.5rem; }
+  .site-main .error-404 > .page-content > .search-form {
+    margin: 0 auto 30px;
+    width: 265px; }
+    @media screen and (min-width: 37.5em) {
+      .site-main .error-404 > .page-content > .search-form {
+        margin: 0 0 30px;
+        width: auto; } }
+  .site-main .error-404 > .page-content > img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px; }
 
 /*--------------------------------------------------------------
 ## Asides
