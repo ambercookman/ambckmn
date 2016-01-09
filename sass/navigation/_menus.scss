@@ -144,21 +144,9 @@ button.menu-toggle {
 	}
 } */
 
-.comment-navigation,
-.posts-navigation .nav-links {
+.posts-navigation.nav-links {
+	margin: 0 1.5em;
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-
-	/* CSS below tied to post nav on main blog pages, not single pages.
-	   the text in the original loop was modified to include the angle
-	   brackets seen on the page, and add the class names 'alignleft' and
-	   'alignright'. This was modified in the "get_the_posts_navigation"
-	   function starting on line 2325 in link-template.php, in the /wp-includes
-	   folder (next to /wp-content, which is where this theme is held). */
 	> .nav-previous.alignleft,
 	> .nav-next.alignright {
 		padding: 5px;
@@ -172,6 +160,16 @@ button.menu-toggle {
 			}
 		}
 	}
+}
+
+.comment-navigation,
+.posts-navigation .nav-links {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
 	> div.nav-previous.alignleft {
 		width: 6.25rem; /*  100 / 16 = 6.25 */
 	}

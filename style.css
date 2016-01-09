@@ -747,54 +747,37 @@ button.menu-toggle {
 		display: block;
 	}
 } */
-.comment-navigation,
-.posts-navigation .nav-links {
-  /* CSS below tied to post nav on main blog pages, not single pages.
-	   the text in the original loop was modified to include the angle
-	   brackets seen on the page, and add the class names 'alignleft' and
-	   'alignright'. This was modified in the "get_the_posts_navigation"
-	   function starting on line 2325 in link-template.php, in the /wp-includes
-	   folder (next to /wp-content, which is where this theme is held). */ }
-  .site-main .comment-navigation, .site-main
-  .posts-navigation .nav-links {
-    margin: 0 0 1.5em;
-    overflow: hidden; }
-  .comment-navigation > .nav-previous.alignleft,
-  .comment-navigation > .nav-next.alignright,
-  .posts-navigation .nav-links > .nav-previous.alignleft,
-  .posts-navigation .nav-links > .nav-next.alignright {
+.posts-navigation.nav-links {
+  margin: 0 1.5em; }
+  .posts-navigation.nav-links > .nav-previous.alignleft,
+  .posts-navigation.nav-links > .nav-next.alignright {
     padding: 5px; }
-    .comment-navigation > .nav-previous.alignleft:hover, .comment-navigation > .nav-previous.alignleft:focus, .comment-navigation > .nav-previous.alignleft:active,
-    .comment-navigation > .nav-next.alignright:hover,
-    .comment-navigation > .nav-next.alignright:focus,
-    .comment-navigation > .nav-next.alignright:active,
-    .posts-navigation .nav-links > .nav-previous.alignleft:hover,
-    .posts-navigation .nav-links > .nav-previous.alignleft:focus,
-    .posts-navigation .nav-links > .nav-previous.alignleft:active,
-    .posts-navigation .nav-links > .nav-next.alignright:hover,
-    .posts-navigation .nav-links > .nav-next.alignright:focus,
-    .posts-navigation .nav-links > .nav-next.alignright:active {
+    .posts-navigation.nav-links > .nav-previous.alignleft:hover, .posts-navigation.nav-links > .nav-previous.alignleft:focus, .posts-navigation.nav-links > .nav-previous.alignleft:active,
+    .posts-navigation.nav-links > .nav-next.alignright:hover,
+    .posts-navigation.nav-links > .nav-next.alignright:focus,
+    .posts-navigation.nav-links > .nav-next.alignright:active {
       color: #fff;
       background: rgba(192, 72, 72, 0.8); }
-      .comment-navigation > .nav-previous.alignleft:hover a, .comment-navigation > .nav-previous.alignleft:focus a, .comment-navigation > .nav-previous.alignleft:active a,
-      .comment-navigation > .nav-next.alignright:hover a,
-      .comment-navigation > .nav-next.alignright:focus a,
-      .comment-navigation > .nav-next.alignright:active a,
-      .posts-navigation .nav-links > .nav-previous.alignleft:hover a,
-      .posts-navigation .nav-links > .nav-previous.alignleft:focus a,
-      .posts-navigation .nav-links > .nav-previous.alignleft:active a,
-      .posts-navigation .nav-links > .nav-next.alignright:hover a,
-      .posts-navigation .nav-links > .nav-next.alignright:focus a,
-      .posts-navigation .nav-links > .nav-next.alignright:active a {
+      .posts-navigation.nav-links > .nav-previous.alignleft:hover a, .posts-navigation.nav-links > .nav-previous.alignleft:focus a, .posts-navigation.nav-links > .nav-previous.alignleft:active a,
+      .posts-navigation.nav-links > .nav-next.alignright:hover a,
+      .posts-navigation.nav-links > .nav-next.alignright:focus a,
+      .posts-navigation.nav-links > .nav-next.alignright:active a {
         color: #fff; }
-  .comment-navigation > div.nav-previous.alignleft,
-  .posts-navigation .nav-links > div.nav-previous.alignleft {
-    width: 6.25rem;
-    /*  100 / 16 = 6.25 */ }
-  .comment-navigation > div.nav-next.alignright,
-  .posts-navigation .nav-links > div.nav-next.alignright {
-    width: 6.875rem;
-    /*  110 / 16 = 6.875  */ }
+
+.site-main .comment-navigation, .site-main
+.posts-navigation .nav-links {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+.comment-navigation > div.nav-previous.alignleft,
+.posts-navigation .nav-links > div.nav-previous.alignleft {
+  width: 6.25rem;
+  /*  100 / 16 = 6.25 */ }
+
+.comment-navigation > div.nav-next.alignright,
+.posts-navigation .nav-links > div.nav-next.alignright {
+  width: 6.875rem;
+  /*  110 / 16 = 6.875  */ }
 
 .post-navigation {
   margin: 0 1.5em 0; }
