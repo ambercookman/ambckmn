@@ -146,20 +146,6 @@ button.menu-toggle {
 
 .posts-navigation.nav-links {
 	margin: 0 1.5em;
-
-	> .nav-previous.alignleft,
-	> .nav-next.alignright {
-		padding: 5px;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $color__background-body;
-			background: $gradient-color1;
-			a {
-				color: $color__background-body;
-			}
-		}
-	}
 }
 
 .comment-navigation,
@@ -183,16 +169,7 @@ button.menu-toggle {
 
 	> .nav-previous,
 	> .nav-next {
-		padding: 5px;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $color__background-body;
-			background: $gradient-color1;
-			a {
-				color: $color__background-body;
-			}
-		}
+		margin-bottom: 30px;
 	}
 }
 

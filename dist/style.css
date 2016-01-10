@@ -613,14 +613,14 @@ a {
   a:visited {
     color: #c04848; }
   a:hover, a:focus, a:active {
-    color: #c04848; }
-  a:focus, a:hover, a:active {
-    outline: 0; }
+    outline: 0;
+    color: #fff;
+    background: rgba(192, 72, 72, 0.8);
+    padding: 5px; }
 
-.entry-content a:focus, .entry-content a:hover, .entry-content a:active,
-.site-title a:focus,
-.site-title a:hover,
-.site-title a:active {
+.site-title a:focus, .site-title a:hover, .site-title a:active {
+  padding: 0;
+  border: none;
   -webkit-background-clip: text;
   color: #fff;
   font-weight: bold;
@@ -747,71 +747,29 @@ button.menu-toggle {
 		display: block;
 	}
 } */
-.comment-navigation,
+.posts-navigation.nav-links {
+  margin: 0 1.5em; }
+
+.site-main .comment-navigation, .site-main
 .posts-navigation .nav-links {
-  /* CSS below tied to post nav on main blog pages, not single pages.
-	   the text in the original loop was modified to include the angle
-	   brackets seen on the page, and add the class names 'alignleft' and
-	   'alignright'. This was modified in the "get_the_posts_navigation"
-	   function starting on line 2325 in link-template.php, in the /wp-includes
-	   folder (next to /wp-content, which is where this theme is held). */ }
-  .site-main .comment-navigation, .site-main
-  .posts-navigation .nav-links {
-    margin: 0 0 1.5em;
-    overflow: hidden; }
-  .comment-navigation > .nav-previous.alignleft,
-  .comment-navigation > .nav-next.alignright,
-  .posts-navigation .nav-links > .nav-previous.alignleft,
-  .posts-navigation .nav-links > .nav-next.alignright {
-    padding: 5px; }
-    .comment-navigation > .nav-previous.alignleft:hover, .comment-navigation > .nav-previous.alignleft:focus, .comment-navigation > .nav-previous.alignleft:active,
-    .comment-navigation > .nav-next.alignright:hover,
-    .comment-navigation > .nav-next.alignright:focus,
-    .comment-navigation > .nav-next.alignright:active,
-    .posts-navigation .nav-links > .nav-previous.alignleft:hover,
-    .posts-navigation .nav-links > .nav-previous.alignleft:focus,
-    .posts-navigation .nav-links > .nav-previous.alignleft:active,
-    .posts-navigation .nav-links > .nav-next.alignright:hover,
-    .posts-navigation .nav-links > .nav-next.alignright:focus,
-    .posts-navigation .nav-links > .nav-next.alignright:active {
-      color: #fff;
-      background: rgba(192, 72, 72, 0.8); }
-      .comment-navigation > .nav-previous.alignleft:hover a, .comment-navigation > .nav-previous.alignleft:focus a, .comment-navigation > .nav-previous.alignleft:active a,
-      .comment-navigation > .nav-next.alignright:hover a,
-      .comment-navigation > .nav-next.alignright:focus a,
-      .comment-navigation > .nav-next.alignright:active a,
-      .posts-navigation .nav-links > .nav-previous.alignleft:hover a,
-      .posts-navigation .nav-links > .nav-previous.alignleft:focus a,
-      .posts-navigation .nav-links > .nav-previous.alignleft:active a,
-      .posts-navigation .nav-links > .nav-next.alignright:hover a,
-      .posts-navigation .nav-links > .nav-next.alignright:focus a,
-      .posts-navigation .nav-links > .nav-next.alignright:active a {
-        color: #fff; }
-  .comment-navigation > div.nav-previous.alignleft,
-  .posts-navigation .nav-links > div.nav-previous.alignleft {
-    width: 6.25rem;
-    /*  100 / 16 = 6.25 */ }
-  .comment-navigation > div.nav-next.alignright,
-  .posts-navigation .nav-links > div.nav-next.alignright {
-    width: 6.875rem;
-    /*  110 / 16 = 6.875  */ }
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+.comment-navigation > div.nav-previous.alignleft,
+.posts-navigation .nav-links > div.nav-previous.alignleft {
+  width: 6.25rem;
+  /*  100 / 16 = 6.25 */ }
+
+.comment-navigation > div.nav-next.alignright,
+.posts-navigation .nav-links > div.nav-next.alignright {
+  width: 6.875rem;
+  /*  110 / 16 = 6.875  */ }
 
 .post-navigation {
   margin: 0 1.5em 0; }
   .post-navigation > .nav-previous,
   .post-navigation > .nav-next {
-    padding: 5px; }
-    .post-navigation > .nav-previous:hover, .post-navigation > .nav-previous:focus, .post-navigation > .nav-previous:active,
-    .post-navigation > .nav-next:hover,
-    .post-navigation > .nav-next:focus,
-    .post-navigation > .nav-next:active {
-      color: #fff;
-      background: rgba(192, 72, 72, 0.8); }
-      .post-navigation > .nav-previous:hover a, .post-navigation > .nav-previous:focus a, .post-navigation > .nav-previous:active a,
-      .post-navigation > .nav-next:hover a,
-      .post-navigation > .nav-next:focus a,
-      .post-navigation > .nav-next:active a {
-        color: #fff; }
+    margin-bottom: 30px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -929,9 +887,6 @@ button.menu-toggle {
 /*--------------------------------------------------------------
 ## Layout: Page -- About-Me
 --------------------------------------------------------------*/
-.widget_wptreehouse_badges_widget .widget-title {
-  color: #c04848; }
-
 .widget_wptreehouse_badges_widget .wptreehouse-badges {
   padding-left: 3.75rem; }
 
@@ -969,24 +924,6 @@ button.menu-toggle {
 .entry-title {
   margin: 10px auto 5px;
   color: rgba(192, 72, 72, 0.8); }
-  .entry-title > a {
-    padding: 5px; }
-  .entry-title > a:hover,
-  .entry-title > a:active,
-  .entry-title > a:focus {
-    border-top: 1px solid #480048;
-    font-weight: bold;
-    color: #480048; }
-
-.entry-header > .entry-meta > .posted-on a:hover,
-.entry-header > .entry-meta > .posted-on a:active,
-.entry-header > .entry-meta > .posted-on a:focus,
-.entry-header > .entry-meta > .byline a:hover,
-.entry-header > .entry-meta > .byline a:active,
-.entry-header > .entry-meta > .byline a:focus {
-  border-bottom: 1px solid #480048;
-  font-weight: bold;
-  color: #480048; }
 
 .entry-header hr {
   border: 0;
@@ -1034,15 +971,6 @@ button.menu-toggle {
   letter-spacing: initial;
   font-weight: normal;
   display: inline; }
-  .entry-footer .comments-link > a:hover,
-  .entry-footer .comments-link > a:active,
-  .entry-footer .comments-link > a:focus,
-  .entry-footer .post-edit-link > a:hover,
-  .entry-footer .post-edit-link > a:active,
-  .entry-footer .post-edit-link > a:focus {
-    border-bottom: 1px solid #480048;
-    font-weight: bold;
-    color: #480048; }
 
 .edit-link {
   font-size: 15.648px;
@@ -1054,12 +982,6 @@ button.menu-toggle {
     letter-spacing: 0.07rem;
     width: 10px;
     height: 10px; }
-  .edit-link > a:hover,
-  .edit-link > a:active,
-  .edit-link > a:focus {
-    border-bottom: 1px solid #480048;
-    font-weight: bold;
-    color: #480048; }
 
 .page-links {
   clear: both;

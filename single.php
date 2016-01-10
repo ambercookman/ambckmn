@@ -21,19 +21,16 @@ get_header(); ?>
 			
 			<div class="post-navigation">
 				<div class="nav-previous alignleft">
-					<?php previous_post('&laquo; %', 'Previous', 'no'); ?>
+					<?php previous_post_link('%link', '&laquo; Previous'); ?>
 				</div>
 				<div class="nav-next alignright">
-					<?php next_post('% &raquo; ', 'Next', 'no'); ?>
+					<?php next_post_link('%link', 'Next &raquo;'); ?>
 				</div>
 			</div> <!-- end navigation -->
 
-			<!-- original comment code
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
+			<?php if ( comments_open() || get_comments_number() ) :
 				comments_template();
-			endif;
-			-->
+			endif; ?>
 
 		<?php endwhile; // End of the loop.
 		?>

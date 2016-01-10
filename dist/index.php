@@ -38,11 +38,29 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_navigation();
+			<div class="posts-navigation nav-links">
 
-		else :
+				<div class="nav-previous alignleft">
+
+				<?php if( get_next_posts_link() ) :
+
+				next_posts_link( '« Older Posts', 0 );
+
+				endif; ?> </div>
+
+				<div class="nav-next alignright">
+
+				<?php if( get_previous_posts_link() ) :
+
+				previous_posts_link( 'Newer Posts »' );
+
+				endif; ?> </div>
+
+			</div>
+
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 

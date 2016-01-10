@@ -5,23 +5,23 @@ a {
 	&:visited {
 		color: $color__link-visited;
 	}
+	
 	&:hover,
 	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus,
-	&:hover,
 	&:active {
 		outline: 0;
+		color: $color__background-body;
+		background: $gradient-color1;
+		padding: 5px;
 	}
 }
 
-.entry-content a,
 .site-title a {
 	&:focus,
 	&:hover,
 	&:active {
+		padding: 0;
+		border: none;
 		-webkit-background-clip: text;
 		color: #fff;
 		font-weight: bold;
