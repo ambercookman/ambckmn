@@ -28,21 +28,22 @@ h6 {
 	@include font-size(0.869);
 }
 
-.site-title {
+.site-title,
+p.site-title {
 	font-family: $font__logo;
 	width: 14.06rem; /*  225 / 16 -- minus .0025 */
 	letter-spacing: 0.0625rem; /*  1 / 16  */
-	margin: 0.75rem 1rem 0.3125rem 0; /*  12 / 16 = 0.75,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
+	margin: 0.75rem 0 0.3125rem 0; /*  12 / 16 = 0.75,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
 	
 	/*  400 / 16 = 25  */
 	@media screen and (min-width: 25em) {
-		margin-right: 1.7rem; /* site-wide use 1.5, this is to work with title specifically */
+		margin-right: 1.5rem; /* site-wide use 1.5, this is to work with title specifically */
 	}
 }
 
 .site-title,
 .site-description {
-	text-align: center;
+	// text-align: center;
 	float: right;
 }
 
@@ -56,12 +57,12 @@ h6 {
 	}
 }
 
-.site-description {
+p.site-description {
 	font-family: $font__headings;
 	@include font-size(1.1);
 	letter-spacing: 0.0625rem; /*  1 / 16  */
-	width: 10.4375rem; /*  167 / 16  */
-	margin: -0.625rem 1.4rem 0 0; /*  10 / 16  */
+	width: 9.8rem; /*  167 / 16  */
+	margin: -0.625rem 1.5rem 0 0; /*  10 / 16  */
 	clear: right;
 }
 
@@ -73,8 +74,9 @@ h6 {
 		margin-left: 5%;
 	}
 
-	.site-title,
-	.site-description {
+	h1.site-title,
+	p.site-title,
+	p.site-description {
 		margin-right: 7%;
 	}
 }
