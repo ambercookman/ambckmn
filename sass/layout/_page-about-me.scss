@@ -1,7 +1,3 @@
-.widget_wptreehouse_badges_widget .wptreehouse-badges {
-	padding-left: 3.75rem; //  60 / 16 = 3.75
-}
-
 /*  800 / 16 = 50  */
 @media screen and (min-width: 50em) {
 
@@ -17,21 +13,6 @@
 		margin-right: 1.25rem; //  20 / 16 = 1.25
 		margin-left: 0;
 		padding-left: 1.25rem; //  20 / 16 = 1.25
-	}
-
-	.widget_wptreehouse_badges_widget .widget-title {
-		margin-top: 0.625rem; //  10 / 16 = 0.625
-		text-align: center;
-	}
-
-	.widget_wptreehouse_badges_widget .wptreehouse-badges {
-		padding-left: 1rem; //  20 / 16 = 1.25, but looks better at 1 :shrug:
-	}
-
-	.widget_wptreehouse_badges_widget .wptreehouse-badges .wptreehouse-badge {
-		width: 5rem; // originally: 100px, 80 / 16 = 5
-		height: 5.75rem; // originally: 116px, 92 / 16 = 5.75
-		margin: 0.3125rem  0.9375rem; //  5 / 16 = 0.3125 , 15 / 16 = 0.9375
 	}
 
 }

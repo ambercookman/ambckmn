@@ -520,8 +520,8 @@ button.menu-toggle {
   color: #111;
   border: none;
   float: left;
-  margin: -2.0625rem 0 0 0.625rem;
-  /*  -33 / 16 = -2.0625,  10 / 16 = 0.625  */ }
+  margin: -2.0625rem 0 0 1.125rem;
+  /*  -33 / 16 = -2.0625,  18 / 16 = 1.125  */ }
 
 button.menu-toggle:after {
   content: "";
@@ -860,6 +860,81 @@ button.menu-toggle {
   .widget select {
     max-width: 100%; }
 
+.widget-title {
+  margin-top: 0.625rem;
+  text-align: center; }
+
+.widget_text {
+  margin-bottom: 3rem; }
+
+.team-treehouse {
+  text-align: center; }
+  .team-treehouse h3 {
+    margin: 0 auto; }
+  .team-treehouse :first-child {
+    margin-top: 2rem; }
+  .team-treehouse strong {
+    color: #c04848;
+    cursor: pointer; }
+    .team-treehouse strong:hover, .team-treehouse strong:focus, .team-treehouse strong:active {
+      outline: 0;
+      color: #fff;
+      background: rgba(192, 72, 72, 0.8);
+      padding: 5px; }
+  .team-treehouse p {
+    font-size: 13.904px;
+    font-size: 0.869rem;
+    margin: 0 auto; }
+    .team-treehouse p > a {
+      color: #c04848;
+      cursor: pointer; }
+      .team-treehouse p > a:hover, .team-treehouse p > a:focus, .team-treehouse p > a:active {
+        outline: 0;
+        color: #fff;
+        background: rgba(192, 72, 72, 0.8);
+        padding: 5px; }
+
+.team-treehouse a {
+  color: #404040;
+  cursor: default; }
+  .team-treehouse a:hover, .team-treehouse a:focus, .team-treehouse a:active {
+    color: #404040;
+    background: #fff;
+    padding: 0; }
+
+.legend {
+  width: 100%;
+  margin: -1rem 0 0.8rem -1.25rem; }
+  .legend ul {
+    list-style-type: none;
+    list-style-position: inside;
+    font-size: 0.8em; }
+  .legend li {
+    text-align: left;
+    height: 1.25em;
+    margin-bottom: 0.7em;
+    padding-left: 0.5em;
+    border-left: 1.25em solid black; }
+  .legend li:before {
+    display: none; }
+  .legend em {
+    font-style: normal; }
+  .legend span {
+    float: right;
+    font-weight: bold; }
+
+.widget_wptreehouse_badges_widget .wptreehouse-badges {
+  padding-left: 3.75rem; }
+
+/*  800 / 16 = 50  */
+@media screen and (min-width: 50em) {
+  .widget_wptreehouse_badges_widget .wptreehouse-badges {
+    padding-left: 1rem; }
+  .widget_wptreehouse_badges_widget .wptreehouse-badges .wptreehouse-badge {
+    width: 5rem;
+    height: 5.75rem;
+    margin: 0.3125rem  0.9375rem; } }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -887,9 +962,6 @@ button.menu-toggle {
 /*--------------------------------------------------------------
 ## Layout: Page -- About-Me
 --------------------------------------------------------------*/
-.widget_wptreehouse_badges_widget .wptreehouse-badges {
-  padding-left: 3.75rem; }
-
 /*  800 / 16 = 50  */
 @media screen and (min-width: 50em) {
   .about .site-main {
@@ -901,22 +973,16 @@ button.menu-toggle {
     float: right;
     margin-right: 1.25rem;
     margin-left: 0;
-    padding-left: 1.25rem; }
-  .widget_wptreehouse_badges_widget .widget-title {
-    margin-top: 0.625rem;
-    text-align: center; }
-  .widget_wptreehouse_badges_widget .wptreehouse-badges {
-    padding-left: 1rem; }
-  .widget_wptreehouse_badges_widget .wptreehouse-badges .wptreehouse-badge {
-    width: 5rem;
-    height: 5.75rem;
-    margin: 0.3125rem  0.9375rem; } }
+    padding-left: 1.25rem; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
   display: block; }
+
+.page-header {
+  margin: 0 1.5rem 0 1.5rem; }
 
 .hentry {
   margin: 0 0 3rem; }

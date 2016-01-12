@@ -6,3 +6,120 @@
 		max-width: 100%;
 	}
 }
+
+.widget-title {
+	margin-top: 0.625rem; //  10 / 16 = 0.625
+	text-align: center;
+}
+
+
+// Treehouse Achievements Text Widget
+
+.widget_text {
+	margin-bottom: 3rem;
+}
+
+.team-treehouse {
+	text-align: center;
+
+	h3 {
+		margin: 0 auto;
+	}
+	:first-child {
+		margin-top: 2rem;
+	}
+	strong {
+		color: $color__link;
+		cursor: pointer;
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+			color: $color__background-body;
+			background: $gradient-color1;
+			padding: 5px;
+		}
+	}
+	p {
+		@include font-size(0.869);
+		margin: 0 auto;
+
+		> a {
+			color: $color__link;
+			cursor: pointer;
+
+			&:hover,
+			&:focus,
+			&:active {
+				outline: 0;
+				color: $color__background-body;
+				background: $gradient-color1;
+				padding: 5px;
+			}
+		}
+	}
+}
+
+.team-treehouse a {
+	color: $color__text-main;
+	cursor: default;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__text-main;
+		background: $color__background-body;
+		padding: 0;
+	}
+}
+
+.legend {
+  width: 100%;
+  margin: -1rem 0 0.8rem -1.25rem;
+  
+  ul {
+    list-style-type: none;
+    list-style-position: inside;
+    font-size: 0.8em;
+  }
+  li {
+  	text-align: left;
+    height: 1.25em;
+    margin-bottom: 0.7em;
+    padding-left: 0.5em;
+    border-left: 1.25em solid black;
+  }
+  li:before {
+    	display: none;
+    }
+  em {
+    font-style: normal;
+  }
+  span {
+    float: right;
+    font-weight: bold;
+  }
+}
+
+
+// Treehouse Badges Plugin
+
+.widget_wptreehouse_badges_widget .wptreehouse-badges {
+	padding-left: 3.75rem; //  60 / 16 = 3.75
+}
+
+/*  800 / 16 = 50  */
+@media screen and (min-width: 50em) {
+
+	.widget_wptreehouse_badges_widget .wptreehouse-badges {
+		padding-left: 1rem; //  20 / 16 = 1.25, but looks better at 1 :shrug:
+	}
+
+	.widget_wptreehouse_badges_widget .wptreehouse-badges .wptreehouse-badge {
+		width: 5rem; // originally: 100px, 80 / 16 = 5
+		height: 5.75rem; // originally: 116px, 92 / 16 = 5.75
+		margin: 0.3125rem  0.9375rem; //  5 / 16 = 0.3125 , 15 / 16 = 0.9375
+	}
+
+}
