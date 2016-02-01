@@ -560,6 +560,9 @@ input[type="submit"] {
 .search-submit {
   margin-left: -5px; }
 
+p.contact-submit {
+  float: right; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -581,7 +584,8 @@ textarea {
   width: 100%; }
 
 input[type="text"],
-input[type="search"] {
+input[type="search"],
+input[type="email"] {
   color: #404040;
   border-top: none;
   border-left: none;
@@ -590,7 +594,8 @@ input[type="search"] {
   background: transparent;
   padding: 5px; }
   input[type="text"]:focus,
-  input[type="search"]:focus {
+  input[type="search"]:focus,
+  input[type="email"]:focus {
     outline: none; }
 
 select {
@@ -602,6 +607,11 @@ select {
   margin: o auto; }
   #primary-menu .menu-search-form > p {
     margin: 0 0 0 3.5em; }
+
+.contact-form > div > label,
+.contact-form > div > input,
+.contact-form > div > textarea {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 # Navigation

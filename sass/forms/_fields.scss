@@ -8,6 +8,7 @@ textarea {
 	border: 1px solid $color__text-main;
 	background: transparent;
 	padding: 5px;
+	// min-width: 265px;
 }
 
 input[type="email"],
@@ -22,7 +23,8 @@ textarea {
 }
 
 input[type="text"],
-input[type="search"] {
+input[type="search"],
+input[type="email"] {
 	color: $color__text-main;
 	border-top: none;
 	border-left: none;
@@ -48,3 +50,28 @@ select {
 		margin: 0 0 0 3.5em;
 	}
 }
+
+
+// Contact Page (Let's Talk)
+
+// .contact-form {
+// 	background: tomato;
+
+// 	> div {
+// 		background: teal;
+// 	}
+// }
+
+.contact-form > div > label,
+.contact-form > div > input,
+.contact-form > div > textarea {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
