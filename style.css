@@ -1042,7 +1042,8 @@ button.menu-toggle {
   margin: 1.5rem; }
 
 .entry-content .more-link {
-  float: right; }
+  float: right;
+  margin-top: 35px; }
 
 .page-content,
 .entry-summary {
@@ -1051,6 +1052,19 @@ button.menu-toggle {
 .entry-footer {
   margin: 1.5rem;
   text-align: center; }
+
+.entry-footer > .cat-links {
+  font-size: 15.648px;
+  font-size: 0.978rem; }
+
+.entry-footer > .cat-links,
+.entry-footer > h5 {
+  margin-right: 10px; }
+
+.entry-footer > .cat-links,
+.entry-footer > h5,
+.entry-footer > .edit-link {
+  display: inline-block; }
 
 .entry-footer .comments-link,
 .entry-footer .post-edit-link {

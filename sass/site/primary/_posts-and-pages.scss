@@ -50,6 +50,7 @@
 
 .entry-content .more-link {
 	float: right;
+	margin-top: 35px;
 }
 
 .page-content,
@@ -60,6 +61,21 @@
 .entry-footer {
 	margin: 1.5rem;
 	text-align: center;
+}
+
+.entry-footer > .cat-links {
+	@include font-size(0.978);
+}
+
+.entry-footer > .cat-links,
+.entry-footer > h5 {
+	margin-right: 10px;
+}
+
+.entry-footer > .cat-links,
+.entry-footer > h5,
+.entry-footer > .edit-link {
+	display: inline-block;
 }
 
 .entry-footer .comments-link,
