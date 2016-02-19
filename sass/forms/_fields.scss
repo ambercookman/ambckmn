@@ -38,7 +38,7 @@ input[type="email"] {
 }
 
 select {
-	border: none;
+	border: rgba(192,72,72,0.8) solid 3px;
 	&:focus {
 		outline: rgba(192,72,72,0.8) solid 3px;
 	}

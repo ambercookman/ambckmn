@@ -599,7 +599,7 @@ input[type="email"] {
     outline: none; }
 
 select {
-  border: none; }
+  border: rgba(192, 72, 72, 0.8) solid 3px; }
   select:focus {
     outline: rgba(192, 72, 72, 0.8) solid 3px; }
 
@@ -1043,7 +1043,7 @@ button.menu-toggle {
 
 .entry-content .more-link {
   float: right;
-  margin-top: 35px; }
+  margin-top: 50px; }
 
 .page-content,
 .entry-summary {
@@ -1059,7 +1059,7 @@ button.menu-toggle {
 
 .entry-footer > .cat-links,
 .entry-footer > h5 {
-  margin-right: 10px; }
+  margin-right: 7px; }
 
 .entry-footer > .cat-links,
 .entry-footer > h5,
