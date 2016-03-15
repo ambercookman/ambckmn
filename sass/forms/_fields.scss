@@ -31,7 +31,7 @@ input[type="email"] {
 	border-right: none;
 	border-bottom: 1px solid $color__text-main;
 	background: transparent;
-	padding: 5px;
+	padding: 6px;
 	&:focus {
 		outline: none;
 	}
@@ -44,10 +44,14 @@ select {
 	}
 }
 
-#primary-menu .menu-search-form {
+#primary-menu li.menu-search-form {
 	margin: o auto;
 	> p {
 		margin: 0 0 0 3.5em;
+	}
+
+	input[type="search"] {
+
 	}
 }
 

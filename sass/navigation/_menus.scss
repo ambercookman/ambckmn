@@ -69,80 +69,126 @@
 }
 
 /* Small menu. */
-button.menu-toggle {
-	height: 2.5rem; /*  40 / 16  */ 
-}
+@media screen and (max-width: 899px) {
+	button.menu-toggle {
+		height: 2.5rem; /*  40 / 16  */ 
+	}
 
-.menu-toggle,
-.main-navigation.toggled {
-	padding-bottom: 0.9375rem; /*  15 / 16  */
-	background: $color__header-bg;
+	.menu-toggle,
+	.main-navigation.toggled {
+		padding-bottom: 0.9375rem; /*  15 / 16  */
+		background: $color__header-bg;
 
-	ul.nav-menu {
-		display: block;
+		ul.nav-menu {
+			display: block;
+			text-align: right;
 
-		> li.menu-item {
-			width: 100%;
-			a {
-				padding: 0.1875rem 0 0.1875rem 3.2rem; /*  3 / 16, the 3.2 is to get link text to line up with menu arrow icon  */
+			> li.menu-item {
+				width: 100%;
+				a {
+					padding: 0.1875rem 1rem 0.1875rem 0; /*  3 / 16 */
+				}
 			}
-		}
-		> li.menu-item a:hover,
-		> li.menu-item a:focus {
-			font-weight: bold;
-		}
-		.current-menu-item a {
-			padding: 5px;
-			color: $color__background-body;
-			background: $gradient-color1;
-		}
+			li.menu-item-search > .menu-search-form {
+				padding-right: 1.5rem;
+			}
+			> li.menu-item a:hover,
+			> li.menu-item a:focus {
+				font-weight: bold;
+			}
+			.current-menu-item a {
+				padding: 5px;
+				color: $color__background-body;
+				background: $gradient-color1;
+			}
 
-		/*  Hover Brackets Effect in Chrome/FF  */
-		> li.menu-item a:before,
-		> li.menu-item a:after {
-			display: inline-block;
-			opacity: 0;
-			transition: transform 0.3s, opacity 0.2s;
-		}
-		> li.menu-item a:before {
-			margin-right: 10px;
-			content: '[';
-			transform: translateX(20px);
-		}
-		> li.menu-item a:after {
-			margin-left: 10px;
-			content: ']';
-			transform: translateX(-20px);
-		}
-		> li.menu-item a:hover:before,
-		> li.menu-item a:hover:after,
-		> li.menu-item a:focus:before,
-		> li.menu-item a:focus:after {
-			opacity: 1;
-			transform: translateX(0px);
-		}
-		/* End hover brackets effect */
+			/*  Hover Brackets Effect in Chrome/FF  */
+			> li.menu-item a:before,
+			> li.menu-item a:after {
+				display: inline-block;
+				opacity: 0;
+				transition: transform 0.3s, opacity 0.2s;
+			}
+			> li.menu-item a:before {
+				margin-right: 10px;
+				content: '[';
+				transform: translateX(20px);
+			}
+			> li.menu-item a:after {
+				margin-left: 10px;
+				content: ']';
+				transform: translateX(-20px);
+			}
+			> li.menu-item a:hover:before,
+			> li.menu-item a:hover:after,
+			> li.menu-item a:focus:before,
+			> li.menu-item a:focus:after {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+			/* End hover brackets effect */
 
-	}
-
-}
-
-.main-navigation.toggled {
-	/*  960 / 16 = 60  */
-	@media screen and (min-width: 60em) {
-		max-width: 25rem; /*  400 / 16  */
+		}
 	}
 }
 
-/*  760 / 16 = 47.5  
-@media screen and (min-width: 47.5em) {
+// Allow full menu visibility without button on large display
+@media screen and (min-width: 900px) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
-	}
-} */
+
+		> li.menu-item {
+			width: 100%;
+			padding: 0.543rem 0 0.543rem 0;
+			margin: 0;
+			@include font-size(1.762);
+
+			&:hover,
+			&:focus,
+			&:active {
+				outline: 0;
+				color: $color__background-body;
+				background: $gradient-color1;
+			}
+
+			a:focus,
+			a:active,
+			a:hover {
+				padding: 0;
+				background: transparent;
+			}
+
+			/*  Hover Brackets Effect in Chrome/FF  */
+			a:before,
+			a:after {
+				display: inline-block;
+				opacity: 0;
+				transition: transform 0.3s, opacity 0.2s;
+			}
+			a:before {
+				margin-right: 10px;
+				content: '[';
+				transform: translateX(20px);
+			}
+			a:after {
+				margin-left: 10px;
+				content: ']';
+				transform: translateX(-20px);
+			}
+			a:hover:before,
+			a:hover:after,
+			a:focus:before,
+			a:focus:after {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+			/* End hover brackets effect */
+		}
+	}	
+}
 
 .posts-navigation.nav-links {
 	margin: 0 1.5em;

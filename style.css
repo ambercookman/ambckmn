@@ -306,22 +306,19 @@ h6 {
 .site-title,
 p.site-title {
   font-family: "sansumiregular", sans-serif;
-  width: 14.06rem;
-  /*  225 / 16 -- minus .0025 */
   letter-spacing: 0.0625rem;
   /*  1 / 16  */
-  margin: 0.75rem 0 0.3125rem 0;
-  /*  12 / 16 = 0.75,  5 / 16 = 0.3125, 1.5em is from rest of site margin, but only looked right at 1 */
+  margin: 0.75rem 0 0 1.5rem;
+  /*  12 / 16 = 0.75 */
   /*  400 / 16 = 25  */ }
   @media screen and (min-width: 25em) {
     .site-title,
     p.site-title {
-      margin-right: 1.5rem;
-      /* site-wide use 1.5, this is to work with title specifically */ } }
+      /* margin-left: 1.5rem;  site-wide use 1.5, this is to work with title specifically */ } }
 
 .site-title,
 .site-description {
-  float: right; }
+  float: left; }
 
 .site-title,
 .entry-title {
@@ -331,29 +328,45 @@ p.site-title {
   @media screen and (min-width: 25em) {
     .site-title,
     .entry-title {
-      font-size: 22.272px;
-      font-size: 1.392rem; } }
+      font-size: 22.784px;
+      font-size: 1.424rem; } }
 
 p.site-description {
   font-family: "ostrich_sansmedium", sans-serif;
-  font-size: 17.6px;
-  font-size: 1.1rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0.0625rem;
   /*  1 / 16  */
-  width: 9.8rem;
-  /*  167 / 16  */
-  margin: -0.625rem 1.5rem 0 0;
-  /*  10 / 16  */
-  clear: right; }
+  margin: -0.375rem 0 0 1.5rem;
+  /*  6 / 16 = 0.375  */
+  clear: both; }
 
-/*  1024 / 16  */
-@media screen and (min-width: 64rem) {
-  .main-navigation {
-    margin-left: 5%; }
-  h1.site-title,
-  p.site-title,
+@media screen and (min-width: 660px) {
+  .site-title,
+  p.site-title {
+    font-size: 28.192px;
+    font-size: 1.762rem; }
+  .site-description,
   p.site-description {
-    margin-right: 7%; } }
+    font-size: 22.272px;
+    font-size: 1.392rem; } }
+
+@media screen and (min-width: 900px) {
+  .site-title,
+  p.site-title,
+  .site-description,
+  p.site-description {
+    width: 100%; }
+  .site-title,
+  p.site-title {
+    margin: 3.175rem auto 0;
+    font-size: 35.68px;
+    font-size: 2.23rem; }
+  .site-description,
+  p.site-description {
+    margin: 0 auto 3.175rem;
+    font-size: 31.712px;
+    font-size: 1.982rem; } }
 
 p {
   margin-bottom: 1.5em; }
@@ -513,6 +526,8 @@ input[type="submit"] {
   line-height: 1; }
 
 button.menu-toggle {
+  font-size: 18px;
+  font-size: 1.125rem;
   background: transparent;
   font-family: "ostrich_sansmedium", sans-serif;
   letter-spacing: 0.0625rem;
@@ -521,9 +536,14 @@ button.menu-toggle {
   text-shadow: none;
   color: #111;
   border: none;
-  float: left;
-  margin: -2.0625rem 0 0 1.125rem;
-  /*  -33 / 16 = -2.0625,  18 / 16 = 1.125  */ }
+  float: right;
+  margin: -37px 2.8125rem 0 0; }
+
+@media screen and (min-width: 660px) {
+  button.menu-toggle {
+    font-size: 22.272px;
+    font-size: 1.392rem;
+    margin: -47px 2.8125rem 0 0; } }
 
 button.menu-toggle:after {
   content: "";
@@ -592,7 +612,7 @@ input[type="email"] {
   border-right: none;
   border-bottom: 1px solid #404040;
   background: transparent;
-  padding: 5px; }
+  padding: 6px; }
   input[type="text"]:focus,
   input[type="search"]:focus,
   input[type="email"]:focus {
@@ -603,9 +623,9 @@ select {
   select:focus {
     outline: rgba(192, 72, 72, 0.8) solid 3px; }
 
-#primary-menu .menu-search-form {
+#primary-menu li.menu-search-form {
   margin: o auto; }
-  #primary-menu .menu-search-form > p {
+  #primary-menu li.menu-search-form > p {
     margin: 0 0 0 3.5em; }
 
 .contact-form > div > label,
@@ -678,87 +698,123 @@ a {
     text-decoration: none; }
 
 /* Small menu. */
-button.menu-toggle {
-  height: 2.5rem;
-  /*  40 / 16  */ }
+@media screen and (max-width: 899px) {
+  button.menu-toggle {
+    height: 2.5rem;
+    /*  40 / 16  */ }
+  .menu-toggle,
+  .main-navigation.toggled {
+    padding-bottom: 0.9375rem;
+    /*  15 / 16  */
+    background: rgba(255, 255, 255, 0.9); }
+    .menu-toggle ul.nav-menu,
+    .main-navigation.toggled ul.nav-menu {
+      display: block;
+      text-align: right;
+      /*  Hover Brackets Effect in Chrome/FF  */
+      /* End hover brackets effect */ }
+      .menu-toggle ul.nav-menu > li.menu-item,
+      .main-navigation.toggled ul.nav-menu > li.menu-item {
+        width: 100%; }
+        .menu-toggle ul.nav-menu > li.menu-item a,
+        .main-navigation.toggled ul.nav-menu > li.menu-item a {
+          padding: 0.1875rem 1rem 0.1875rem 0;
+          /*  3 / 16 */ }
+      .menu-toggle ul.nav-menu li.menu-item-search > .menu-search-form,
+      .main-navigation.toggled ul.nav-menu li.menu-item-search > .menu-search-form {
+        padding-right: 1.5rem; }
+      .menu-toggle ul.nav-menu > li.menu-item a:hover,
+      .menu-toggle ul.nav-menu > li.menu-item a:focus,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:hover,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:focus {
+        font-weight: bold; }
+      .menu-toggle ul.nav-menu .current-menu-item a,
+      .main-navigation.toggled ul.nav-menu .current-menu-item a {
+        padding: 5px;
+        color: #fff;
+        background: rgba(192, 72, 72, 0.8); }
+      .menu-toggle ul.nav-menu > li.menu-item a:before,
+      .menu-toggle ul.nav-menu > li.menu-item a:after,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:before,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s; }
+      .menu-toggle ul.nav-menu > li.menu-item a:before,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:before {
+        margin-right: 10px;
+        content: '[';
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px); }
+      .menu-toggle ul.nav-menu > li.menu-item a:after,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:after {
+        margin-left: 10px;
+        content: ']';
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px); }
+      .menu-toggle ul.nav-menu > li.menu-item a:hover:before,
+      .menu-toggle ul.nav-menu > li.menu-item a:hover:after,
+      .menu-toggle ul.nav-menu > li.menu-item a:focus:before,
+      .menu-toggle ul.nav-menu > li.menu-item a:focus:after,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:hover:before,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:hover:after,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:focus:before,
+      .main-navigation.toggled ul.nav-menu > li.menu-item a:focus:after {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px); } }
 
-.menu-toggle,
-.main-navigation.toggled {
-  padding-bottom: 0.9375rem;
-  /*  15 / 16  */
-  background: rgba(255, 255, 255, 0.9); }
-  .menu-toggle ul.nav-menu,
-  .main-navigation.toggled ul.nav-menu {
-    display: block;
-    /*  Hover Brackets Effect in Chrome/FF  */
-    /* End hover brackets effect */ }
-    .menu-toggle ul.nav-menu > li.menu-item,
-    .main-navigation.toggled ul.nav-menu > li.menu-item {
-      width: 100%; }
-      .menu-toggle ul.nav-menu > li.menu-item a,
-      .main-navigation.toggled ul.nav-menu > li.menu-item a {
-        padding: 0.1875rem 0 0.1875rem 3.2rem;
-        /*  3 / 16, the 3.2 is to get link text to line up with menu arrow icon  */ }
-    .menu-toggle ul.nav-menu > li.menu-item a:hover,
-    .menu-toggle ul.nav-menu > li.menu-item a:focus,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:hover,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:focus {
-      font-weight: bold; }
-    .menu-toggle ul.nav-menu .current-menu-item a,
-    .main-navigation.toggled ul.nav-menu .current-menu-item a {
-      padding: 5px;
-      color: #fff;
-      background: rgba(192, 72, 72, 0.8); }
-    .menu-toggle ul.nav-menu > li.menu-item a:before,
-    .menu-toggle ul.nav-menu > li.menu-item a:after,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:before,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:after {
-      display: inline-block;
-      opacity: 0;
-      -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
-      transition: opacity 0.2s, -webkit-transform 0.3s;
-      transition: transform 0.3s, opacity 0.2s;
-      transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s; }
-    .menu-toggle ul.nav-menu > li.menu-item a:before,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:before {
-      margin-right: 10px;
-      content: '[';
-      -webkit-transform: translateX(20px);
-              transform: translateX(20px); }
-    .menu-toggle ul.nav-menu > li.menu-item a:after,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:after {
-      margin-left: 10px;
-      content: ']';
-      -webkit-transform: translateX(-20px);
-              transform: translateX(-20px); }
-    .menu-toggle ul.nav-menu > li.menu-item a:hover:before,
-    .menu-toggle ul.nav-menu > li.menu-item a:hover:after,
-    .menu-toggle ul.nav-menu > li.menu-item a:focus:before,
-    .menu-toggle ul.nav-menu > li.menu-item a:focus:after,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:hover:before,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:hover:after,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:focus:before,
-    .main-navigation.toggled ul.nav-menu > li.menu-item a:focus:after {
-      opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px); }
+@media screen and (min-width: 900px) {
+  .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: block; }
+    .main-navigation ul > li.menu-item {
+      width: 100%;
+      padding: 0.543rem 0 0.543rem 0;
+      margin: 0;
+      font-size: 28.192px;
+      font-size: 1.762rem;
+      /*  Hover Brackets Effect in Chrome/FF  */
+      /* End hover brackets effect */ }
+      .main-navigation ul > li.menu-item:hover, .main-navigation ul > li.menu-item:focus, .main-navigation ul > li.menu-item:active {
+        outline: 0;
+        color: #fff;
+        background: rgba(192, 72, 72, 0.8); }
+      .main-navigation ul > li.menu-item a:focus,
+      .main-navigation ul > li.menu-item a:active,
+      .main-navigation ul > li.menu-item a:hover {
+        padding: 0;
+        background: transparent; }
+      .main-navigation ul > li.menu-item a:before,
+      .main-navigation ul > li.menu-item a:after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s; }
+      .main-navigation ul > li.menu-item a:before {
+        margin-right: 10px;
+        content: '[';
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px); }
+      .main-navigation ul > li.menu-item a:after {
+        margin-left: 10px;
+        content: ']';
+        -webkit-transform: translateX(-20px);
+                transform: translateX(-20px); }
+      .main-navigation ul > li.menu-item a:hover:before,
+      .main-navigation ul > li.menu-item a:hover:after,
+      .main-navigation ul > li.menu-item a:focus:before,
+      .main-navigation ul > li.menu-item a:focus:after {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px); } }
 
-.main-navigation.toggled {
-  /*  960 / 16 = 60  */ }
-  @media screen and (min-width: 60em) {
-    .main-navigation.toggled {
-      max-width: 25rem;
-      /*  400 / 16  */ } }
-
-/*  760 / 16 = 47.5  
-@media screen and (min-width: 47.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-} */
 .posts-navigation.nav-links {
   margin: 0 1.5em; }
 
@@ -972,13 +1028,39 @@ button.menu-toggle {
   width: 100%;
   z-index: 10; }
 
+@media screen and (min-width: 660px) {
+  .site-header {
+    height: 5.6rem;
+    margin-top: -5.6rem; } }
+
+@media screen and (min-width: 900px) {
+  .site-header {
+    width: 32.5%;
+    float: left;
+    margin: 2.25rem 0 0 0;
+    text-align: center; } }
+
 /*--------------------------------------------------------------
 ## Layout: Site Content
 --------------------------------------------------------------*/
+.site {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .site-content {
   margin: 4.8125rem auto 0;
   /*  77 / 16  */
-  max-width: 800px; }
+  /*max-width: 800px;*/ }
+
+@media screen and (min-width: 660px) {
+  .site-content {
+    margin: 5.6rem auto 0; } }
+
+@media screen and (min-width: 900px) {
+  .site-content {
+    width: 67.5%;
+    margin: 1.762rem 0 0 0;
+    float: right; } }
 
 /*--------------------------------------------------------------
 ## Layout: Page -- About-Me
@@ -1121,7 +1203,9 @@ nav .nav-links > .nav-next {
     @media screen and (min-width: 50em) {
       .site-footer .site-info {
         font-size: 13.904px;
-        font-size: 0.869rem; } }
+        font-size: 0.869rem;
+        width: 100%;
+        clear: both; } }
 
 .site-main .error-404 {
   margin: 0 1.5rem; }

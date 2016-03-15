@@ -149,6 +149,8 @@ nav .nav-links {
 		/*  800 / 16 = 50  */
 		@media screen and (min-width: 50em) {
 			@include font-size(0.869);
+			width: 100%;
+			clear: both;
 		}
 	}
 }

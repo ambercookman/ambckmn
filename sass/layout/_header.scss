@@ -7,3 +7,46 @@
 	width: 100%;
 	z-index: 10;
 }
+
+@media screen and (min-width: 660px) {
+	.site-header{
+		height: 5.6rem;
+		margin-top: -5.6rem;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.site-header {
+		width: 32.5%;
+		float: left;
+		margin: 2.25rem 0 0 0;
+		text-align: center;
+		
+		// position: relative;
+		// -moz-perspective: 800px;
+		// -webkit-perspective: 800px;
+		// -ms-perspective: 800px;
+		// -o-perspective: 800px;
+		// perspective: 800px;
+	}
+
+	// .hover #rotate {
+	//     -webkit-transform: rotateY(30deg);
+	//     -moz-transform: rotateY(30deg);
+	//     -ms-transform: rotateY(30deg);
+	//     -o-transform: rotateY(30deg);
+	//     transform: rotateY(30deg);
+	//     -webkit-transition:-webkit-transform 1s;
+	//     -moz-transition:-moz-transform 1s;
+	//     -o-transition: -o-transform 1s;
+	//     -ms-transition: -ms-transform 1s;
+	//     transition: transform 1s;
+	// }
+	// #rotate:hover {
+	//     -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	//     -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	//     -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	//     -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	//     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	// }
+}

@@ -6,7 +6,8 @@ input[type="submit"] {
 	line-height: 1;
 }
 
-button.menu-toggle{
+button.menu-toggle {
+	@include font-size(1.125);
 	background: transparent;
 	font-family: $font__headings;
 	letter-spacing: 0.0625rem; /*  1 / 16  */
@@ -14,8 +15,15 @@ button.menu-toggle{
 	text-shadow: none;
 	color: $color__text-input-focus;
 	border: none;
-	float: left;
-	margin: -2.0625rem 0 0 1.125rem; /*  -33 / 16 = -2.0625,  18 / 16 = 1.125  */
+	float: right;
+	margin: -37px 2.8125rem 0 0; // 30/16=1.875, 45/16=2.8125
+}
+
+@media screen and (min-width: 660px) {
+	button.menu-toggle {
+		@include font-size(1.392);
+		margin: -47px 2.8125rem 0 0;
+	}
 }
 
 button.menu-toggle:after {
