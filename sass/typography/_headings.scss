@@ -84,13 +84,13 @@ p.site-description {
 	}
 	.site-title,
 	p.site-title {
-		margin: 3.175rem auto 0;
-		@include font-size(2.23);
+		margin: 2.822rem auto 0;
+		@include font-size(1.982);
 	}
 	.site-description,
 	p.site-description {
-		margin: 0 auto 3.175rem;
-		@include font-size(1.982);
+		margin: 0 auto 2.23rem;
+		@include font-size(1.392);
 	}
 }
 

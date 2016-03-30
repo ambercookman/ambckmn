@@ -1,5 +1,22 @@
+.page-id-40 .entry-header {
+	display: none;
+}
+
+.img_about-page {
+	display: block;
+	margin: 0 auto 0;
+	width: 50%;
+	border-radius: 15px;
+	max-width: 250px;
+}
+
 /*  800 / 16 = 50  */
 @media screen and (min-width: 50em) {
+
+	.img_about-page {
+		margin: 1.75rem 0 0 0;
+		width: 80%;
+	}
 
 	.about .site-main {
 		width: 60%;

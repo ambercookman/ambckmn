@@ -359,14 +359,14 @@ p.site-description {
     width: 100%; }
   .site-title,
   p.site-title {
-    margin: 3.175rem auto 0;
-    font-size: 35.68px;
-    font-size: 2.23rem; }
+    margin: 2.822rem auto 0;
+    font-size: 31.712px;
+    font-size: 1.982rem; }
   .site-description,
   p.site-description {
-    margin: 0 auto 3.175rem;
-    font-size: 31.712px;
-    font-size: 1.982rem; } }
+    margin: 0 auto 2.23rem;
+    font-size: 22.272px;
+    font-size: 1.392rem; } }
 
 p {
   margin-bottom: 1.5em; }
@@ -813,7 +813,10 @@ a {
       .main-navigation ul > li.menu-item a:focus:after {
         opacity: 1;
         -webkit-transform: translateX(0px);
-                transform: translateX(0px); } }
+                transform: translateX(0px); }
+    .main-navigation ul li.menu-item:last-of-type:hover, .main-navigation ul li.menu-item:last-of-type:focus, .main-navigation ul li.menu-item:last-of-type:active {
+      color: #404040;
+      background: rgba(255, 255, 255, 0.9); } }
 
 .posts-navigation.nav-links {
   margin: 0 1.5em; }
@@ -1023,7 +1026,6 @@ a {
   /*  78 / 16  */
   margin-top: -4.875rem;
   clear: both;
-  background: rgba(255, 255, 255, 0.9);
   position: fixed;
   width: 100%;
   z-index: 10; }
@@ -1037,7 +1039,7 @@ a {
   .site-header {
     width: 32.5%;
     float: left;
-    margin: 2.25rem 0 0 0;
+    margin: 2.25rem 0 0 1.25rem;
     text-align: center; } }
 
 /*--------------------------------------------------------------
@@ -1060,13 +1062,27 @@ a {
   .site-content {
     width: 67.5%;
     margin: 1.762rem 0 0 0;
+    padding: 0.75rem 0 0 1.25rem;
     float: right; } }
 
 /*--------------------------------------------------------------
 ## Layout: Page -- About-Me
 --------------------------------------------------------------*/
+.page-id-40 .entry-header {
+  display: none; }
+
+.img_about-page {
+  display: block;
+  margin: 0 auto 0;
+  width: 50%;
+  border-radius: 15px;
+  max-width: 250px; }
+
 /*  800 / 16 = 50  */
 @media screen and (min-width: 50em) {
+  .img_about-page {
+    margin: 1.75rem 0 0 0;
+    width: 80%; }
   .about .site-main {
     width: 60%;
     display: inline-block;

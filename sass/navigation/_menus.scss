@@ -91,6 +91,8 @@
 			}
 			li.menu-item-search > .menu-search-form {
 				padding-right: 1.5rem;
+
+
 			}
 			> li.menu-item a:hover,
 			> li.menu-item a:focus {
@@ -186,6 +188,14 @@
 				transform: translateX(0px);
 			}
 			/* End hover brackets effect */
+		}
+		li.menu-item:last-of-type {
+			&:hover,
+			&:focus,
+			&:active {
+				color: $color__text-main;
+				background: $color__header-bg;
+			}
 		}
 	}	
 }
